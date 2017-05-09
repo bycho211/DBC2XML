@@ -1,0 +1,13 @@
+const int L = 12;                  // the length of Arbitration field
+
+int[0, N] trans_vote = 0;           // the number of messages that want to be sent
+int[256, 2047] won_msg = 2047;      // 256 in decimal is 0x100 in hex
+                                    // 2047 in decimal is 0x7ff in hex
+urgent broadcast chan bus_request;
+chan bus_finish;
+
+chan trans_request[N];
+urgent chan trans_finish[N];
+
+broadcast chan won_or_failed;
+

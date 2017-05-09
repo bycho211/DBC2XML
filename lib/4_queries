@@ -1,0 +1,111 @@
+	<queries>
+		<query>
+			<formula>A[] (not deadlock)
+			</formula>
+			<comment> 1. deadlock free
+			</comment>
+		</query>
+		<query>
+			<formula>E[] (tra0.transmitting and tra1.transmitting)
+			</formula>
+			<comment> 2. more than two messages shouldn't be transmitted at the same time
+			</comment>
+		</query>
+		<query>
+			<formula>E[] (tra1.failed)
+			</formula>
+			<comment> 3. message with higher priority shouldn't be failed in arbitration
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (tra2.transmitting) imply (not tra1.failed)
+			</formula>
+			<comment> same with 3.
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (tra0.transmitting) imply (Bus.busy)
+			</formula>
+			<comment> 4. if there is sending node, bus should be busy
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; max_latency[0])
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (tra0.transmitting) imply (tra0.c_transmission &lt; 50)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; 110)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; 109)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; 106)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; 39)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; 37)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; 35)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; 34)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; 20)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; 19)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; 10)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+		<query>
+			<formula>A[] (msg0.trans_finished) imply (tra0.c_transmission &lt; 9)
+			</formula>
+			<comment>
+			</comment>
+		</query>
+	</queries>

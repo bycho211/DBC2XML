@@ -1,0 +1,158 @@
+</declaration>
+	<template>
+		<name x="9" y="9">Bus</name>
+		<declaration>
+void reset() {
+    won_msg = 2047;
+}</declaration>
+		<location id="id0" x="-68" y="77">
+			<name x="-76" y="94">busy</name>
+		</location>
+		<location id="id1" x="-221" y="-68">
+			<name x="-237" y="-110">idle</name>
+		</location>
+		<init ref="id1"/>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="synchronisation" x="-178" y="85">bus_finish?</label>
+			<label kind="assignment" x="-170" y="102">reset()</label>
+			<nail x="-221" y="77"/>
+		</transition>
+		<transition>
+			<source ref="id1"/>
+			<target ref="id0"/>
+			<label kind="guard" x="-178" y="-93">trans_vote &gt; 0</label>
+			<label kind="synchronisation" x="-178" y="-59">bus_request!</label>
+			<label kind="assignment" x="-178" y="-42">trans_vote = 0</label>
+			<nail x="-68" y="-68"/>
+		</transition>
+	</template>
+		<template>
+		<name>Message</name>
+		<parameter>const int num, const int &amp;id, const int &amp;period</parameter>
+		<declaration>
+clock c_period;
+
+
+</declaration>
+		<location id="id2" x="-493" y="-68">
+			<name x="-476" y="-76">trans_finished</name>
+			<committed/>
+		</location>
+		<location id="id3" x="-323" y="17">
+			<name x="-365" y="34">transmitting</name>
+		</location>
+		<location id="id4" x="-323" y="-144">
+			<name x="-297" y="-170">idle</name>
+			<label kind="invariant" x="-297" y="-153">c_period &lt;= period</label>
+		</location>
+		<init ref="id4"/>
+		<transition>
+			<source ref="id2"/>
+			<target ref="id4"/>
+			<nail x="-493" y="-144"/>
+		</transition>
+		<transition>
+			<source ref="id3"/>
+			<target ref="id2"/>
+			<label kind="synchronisation" x="-484" y="-8">trans_finish[num]?</label>
+			<nail x="-493" y="17"/>
+		</transition>
+		<transition>
+			<source ref="id4"/>
+			<target ref="id3"/>
+			<label kind="guard" x="-314" y="-102">c_period == period</label>
+			<label kind="synchronisation" x="-314" y="-85">trans_request[num]!</label>
+			<label kind="assignment" x="-314" y="-68">c_period = 0</label>
+		</transition>
+	</template>
+	<template>
+		<name>Transmit</name>
+		<parameter>const int num, const int &amp;id, const int &amp;period</parameter>
+		<declaration>
+clock t, c_transmission;    // c_transmission;
+
+/*
+    Let the time for arbitration (12bits, 24 microseconds) be 1 in UPPAAL Clock
+    and let the latency be half of the period.
+*/
+const int Ta = 1;    // arbitration_time
+
+void is_won() {
+    if(won_msg &gt;= id)
+        won_msg = id;
+}
+
+
+</declaration>
+		<location id="id7" x="-552" y="60">
+			<name x="-569" y="77">failed</name>
+			<committed/>
+		</location>
+		<location id="id8" x="-85" y="-255">
+			<name x="-93" y="-289">trans_finished</name>
+			<committed/>
+		</location>
+		<location id="id9" x="-85" y="60">
+			<name x="-119" y="68">transmitting</name>
+			<label kind="invariant" x="-123" y="84">t &lt;= Tt[num]</label>
+			<label kind="comments" x="-235" y="-112">Tt : transmission time</label>
+		</location>
+		<location id="id10" x="-323" y="9">
+			<name x="-357" y="26">arbitrating</name>
+			<label kind="invariant" x="-348" y="43">t &lt;= Ta</label>
+			<label kind="comments" x="-384" y="70">Ta : arbitration time</label>
+		</location>
+		<location id="id11" x="-323" y="-136">
+			<name x="-306" y="-144">waiting</name>
+		</location>
+		<location id="id12" x="-323" y="-255">
+			<name x="-331" y="-289">idle</name>
+		</location>
+		<init ref="id12"/>
+		<transition>
+			<source ref="id7"/>
+			<target ref="id11"/>
+			<label kind="assignment" x="-535" y="-127">trans_vote++</label>
+			<nail x="-552" y="-136"/>
+		</transition>
+		<transition>
+			<source ref="id8"/>
+			<target ref="id12"/>
+			<label kind="synchronisation" x="-238" y="-255">trans_finish[num]!</label>
+		</transition>
+		<transition>
+			<source ref="id9"/>
+			<target ref="id8"/>
+			<label kind="guard" x="-76" y="-119">t == Tt[num]</label>
+			<label kind="synchronisation" x="-76" y="-102">bus_finish!</label>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id9"/>
+			<label kind="guard" x="-263" y="0">t == Ta &amp;&amp; won_msg == id</label>
+			<label kind="synchronisation" x="-221" y="17">won_or_failed!</label>
+			<label kind="assignment" x="-178" y="34">t = 0</label>
+			<nail x="-229" y="60"/>
+		</transition>
+		<transition>
+			<source ref="id10"/>
+			<target ref="id7"/>
+			<label kind="guard" x="-527" y="17">won_msg != id</label>
+			<label kind="synchronisation" x="-527" y="34">won_or_failed?</label>
+			<nail x="-416" y="60"/>
+		</transition>
+		<transition>
+			<source ref="id11"/>
+			<target ref="id10"/>
+			<label kind="synchronisation" x="-314" y="-76">bus_request?</label>
+			<label kind="assignment" x="-314" y="-59">is_won(), t = 0</label>
+		</transition>
+		<transition>
+			<source ref="id12"/>
+			<target ref="id11"/>
+			<label kind="synchronisation" x="-459" y="-221">trans_request[num]?</label>
+			<label kind="assignment" x="-535" y="-204">trans_vote++, c_transmission = 0</label>
+		</transition>
+	</template>

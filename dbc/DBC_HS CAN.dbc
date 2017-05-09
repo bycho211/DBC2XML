@@ -1,0 +1,259 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: BCM IC BMS EMS
+
+
+BO_ 339 IC_CFGBKP: 8 IC
+
+BO_ 1073 IC: 8 IC
+
+BO_ 336 BCM_CFG: 8 BCM
+
+BO_ 512 BCM: 8 BMS
+ SG_ BCM_U1 : 7|16@0+ (0.1,0) [0|6553.5] "V"  EMS
+ SG_ BCM_U2 : 23|16@0+ (0.1,0) [0|6553.5] "V"  EMS
+ SG_ BCM_A : 39|16@0- (0.1,0) [-3276.8|3276.7] "A"  EMS
+ SG_ BCM_Ah : 55|16@0- (0.01,0) [-327.68|327.67] "Ah"  EMS
+
+BO_ 513 BCM_Ah: 8 BMS
+ SG_ BCM_Ah_discharge : 39|32@0+ (0.01,0) [0|42949672.95] "Ah"  EMS
+ SG_ BCM_Ah_charge : 7|32@0+ (0.01,0) [0|42949672.95] "Ah"  EMS
+
+BO_ 514 BCM_Wh: 8 BMS
+ SG_ BCM_Wh_discharge : 39|32@0+ (0.1,0) [0|429496729.5] "Wh"  EMS
+ SG_ BCM_Wh_charge : 7|32@0+ (0.1,0) [0|429496729.5] "Wh"  EMS
+
+BO_ 768 CCU_V: 8 BMS
+ SG_ CCU_V_HIGH : 7|16@0+ (0.125,0) [0|8191.875] "mV"  EMS
+ SG_ CCU_V_HIGH2 : 23|16@0+ (0.125,0) [0|8191.875] "mV"  EMS
+ SG_ CCU_V_LOW2 : 39|16@0+ (0.125,0) [0|8191.875] "mV"  EMS
+ SG_ CCU_V_LOW : 55|16@0+ (0.125,0) [0|8191.875] "mV"  EMS
+
+BO_ 769 CCU_Max: 8 BMS
+ SG_ CCU_V_HIGH_PEAK : 7|16@0+ (0.125,0) [0|8191.875] "mV"  EMS
+ SG_ CCU_V_LOW_PEAK : 23|16@0+ (0.125,0) [0|8191.875] "mV"  EMS
+ SG_ CCU_T_HIGH : 39|16@0- (0.0078125,0) [-256|255.9921875] "C"  EMS
+ SG_ CCU_T_LOW : 55|16@0- (0.0078125,0) [-256|255.9921875] "C"  EMS
+
+BO_ 770 CCU_Cell: 6 BMS
+ SG_ CCU_Index : 7|8@0+ (1,0) [0|255] ""  EMS
+ SG_ CCU_Number : 15|8@0+ (1,0) [0|255] ""  EMS
+ SG_ CCU_V : 23|16@0+ (0.125,0) [0|8191.875] "mV"  EMS
+ SG_ CCU_T : 39|16@0- (0.0078125,0) [-256|255.9921875] "C"  EMS
+
+BO_ 256 BMS_Status: 8 BMS
+ SG_ BMS_State : 3|4@0+ (1,0) [0|15] ""  EMS
+ SG_ BMS_ChargeState : 7|4@0+ (1,0) [0|15] ""  EMS
+ SG_ BMS_War_Watchdog : 51|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_UnderTemperature : 56|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_OverTemperature : 57|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_OverDischarge : 62|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_OverCurrentDischarge : 58|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_OverCurrentCharge : 59|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_OverCharge : 63|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_NLG : 60|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_EEprom : 50|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_CanValue : 52|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_CanTx : 53|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_CanRx : 54|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_CanOff : 55|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_bit7 : 48|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_bit6 : 49|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_War_CellVoltageDiff : 61|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_VoltageDivCCU : 33|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_VoltageDivBCM : 32|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_UnderTemperature : 40|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_OverTemperature : 41|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_NLG : 44|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_CanRxNlg : 38|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_CanRxCmd : 39|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_ChargeI2t : 46|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_bit8 : 47|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_bit5 : 34|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_bit4 : 35|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_bit3 : 36|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_bit2 : 37|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_DischargeI2t : 42|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_FuseI2t : 43|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_TErr_CellVoltageDiff : 45|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_Interlock : 25|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_CurrentDischarge : 28|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_CurrentCharge : 29|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_TempSensor : 16|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_Stored : 23|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_PreCharge : 27|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_OverDischarge : 30|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_OverCharge : 31|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_NVSRam : 20|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_NotAus : 24|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_ShortCircuit : 26|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_Flash : 21|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_EEprom : 22|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_CellPwm : 17|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_CcuIndex : 18|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_Err_CcuCapture : 19|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_MODE_OVP : 15|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_MODE_UVP : 14|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_MODE_OTP : 13|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_MODE_UTP : 12|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_MODE_TP : 10|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_MODE_CP : 11|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_MODE_DOD : 9|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BMS_MODE_VD : 8|1@0+ (1,0) [0|1] ""  EMS
+
+BO_ 272 BATT_Act: 8 BMS
+ SG_ BATT_Voltage_Act : 7|16@0+ (0.01,0) [0|655.35] "V"  IC,EMS
+ SG_ BATT_Current_Act : 23|16@0- (0.1,0) [-3276.8|3276.7] "A"  IC,EMS
+ SG_ BATT_T_Average : 39|16@0- (0.1,0) [-3276.8|3276.7] "C"  IC,EMS
+ SG_ BATT_DoD : 55|16@0- (0.01,0) [-327.68|327.67] "%"  IC,EMS
+
+BO_ 273 BATT_Range: 8 BMS
+ SG_ BATT_Voltage_Max : 7|16@0+ (0.01,0) [0|655.35] "V"  IC,EMS
+ SG_ BATT_Voltage_Min : 23|16@0+ (0.01,0) [0|655.35] "V"  IC,EMS
+ SG_ BATT_CurrentChargeMax : 39|16@0+ (0.1,0) [0|6553.5] "A"  IC,EMS
+ SG_ BATT_CurrentDischargeMax : 55|16@0+ (0.1,0) [0|6553.5] "A"  IC,EMS
+
+BO_ 258 BMS_Cmd: 8 EMS
+ SG_ BMS_CMD_RESET_AH : 3|1@0+ (1,0) [0|1] ""  BMS
+ SG_ BMS_CMD_FAN : 11|4@0+ (1,0) [0|15] ""  BMS
+ SG_ BMS_CMD_BALANCING_EN : 2|1@0+ (1,0) [0|1] ""  BMS
+ SG_ BMS_CMD_NLG_EN : 1|1@0+ (1,0) [0|1] ""  BMS
+ SG_ BMS_CMD_HW_EN : 0|1@0+ (1,0) [0|1] ""  BMS
+
+BO_ 1024 BMS_PARAM_RX: 8 EMS
+ SG_ BMS_PARAM_RX_MSG : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  BMS
+
+BO_ 1025 BMS_PARAM_TX: 8 BMS
+ SG_ BMS_PARAM_TX_MSG : 7|64@0+ (1,0) [0|1.84467440737096E+019] ""  EMS
+
+
+
+CM_ SG_ 512 BCM_U1 "Spannung vor Vorladung (Batterieseite)";
+CM_ SG_ 512 BCM_U2 "Spannung nach Vorladung (Verbraucherseite)";
+CM_ SG_ 512 BCM_A "aktueller Batteriestrom";
+CM_ SG_ 512 BCM_Ah "aktuelle Amp?estunden-Bilanz";
+CM_ BO_ 513 "n?zlich f? Statistikaufzeichnungen";
+CM_ SG_ 513 BCM_Ah_discharge "kommulierte entladene Amp?restunden";
+CM_ SG_ 513 BCM_Ah_charge "kommulierte geladene Amp?restunden";
+CM_ BO_ 514 "n?zlich f? Statistikaufzeichnungen";
+CM_ SG_ 514 BCM_Wh_discharge "kommulierte entladene Watt-stunden";
+CM_ SG_ 514 BCM_Wh_charge "kommulierte geladene Watt-stunden";
+CM_ SG_ 768 CCU_V_HIGH "h?hste Zellspannung";
+CM_ SG_ 768 CCU_V_HIGH2 "zweit h?hste Zellspannung";
+CM_ SG_ 768 CCU_V_LOW2 "zweit tiefste Zellspannung";
+CM_ SG_ 768 CCU_V_LOW "tiefste Zellspannung";
+CM_ SG_ 769 CCU_V_HIGH_PEAK "h?hste Zellspannung  ?er 100ms";
+CM_ SG_ 769 CCU_V_LOW_PEAK "tiefste Zellspannung ?er 100ms";
+CM_ SG_ 769 CCU_T_HIGH "h?hste Zellblocktemperatur";
+CM_ SG_ 769 CCU_T_LOW "tiefste Zellblocktemperatur";
+CM_ SG_ 770 CCU_Index "aktueller Zellindex";
+CM_ SG_ 770 CCU_Number "Zellblock (aktuell durch Zellin-dex ausgelesen)";
+CM_ SG_ 770 CCU_V "Spannung der aktuell durch Zellindex beschriebenen Zelle";
+CM_ SG_ 770 CCU_T "Temperatur der aktuell durch CCU_Number beschriebenen Zellblock";
+CM_ BO_ 256 "aktueller BMS Status";
+CM_ SG_ 256 BMS_State "Status";
+CM_ SG_ 256 BMS_ChargeState "Status";
+CM_ SG_ 256 BMS_MODE_OVP "Modus: OverVoltageProtection";
+CM_ SG_ 256 BMS_MODE_UVP "Modus: UnderVoltageProtection";
+CM_ SG_ 256 BMS_MODE_OTP "Modus: OverTemperatureProtection";
+CM_ SG_ 256 BMS_MODE_UTP "Modus: UnderTemperaturProtection";
+CM_ SG_ 256 BMS_MODE_TP "Modus: Temperatur Schutz";
+CM_ SG_ 256 BMS_MODE_CP "Modus: CurrentProtection";
+CM_ SG_ 256 BMS_MODE_DOD "Modus: depth of discharge";
+CM_ SG_ 256 BMS_MODE_VD "Modus: VoltageDivProtection";
+CM_ BO_ 272 "wichtigste Batterieinformationen";
+CM_ SG_ 272 BATT_Voltage_Act "aktuelle Batteriespannung";
+CM_ SG_ 272 BATT_Current_Act "aktueller Batteriestrom";
+CM_ SG_ 272 BATT_T_Average "gemittelte Batterietemperatur";
+CM_ SG_ 272 BATT_DoD "aktueller depth of discharge";
+CM_ BO_ 273 "maximal aktuell verf?bare Leistung";
+CM_ SG_ 273 BATT_Voltage_Max "maximale Batteriespannung";
+CM_ SG_ 273 BATT_Voltage_Min "minimale Batteriespannung";
+CM_ SG_ 273 BATT_CurrentChargeMax "maximaler Ladestrom";
+CM_ SG_ 273 BATT_CurrentDischargeMax "maximaler Entladestrom";
+CM_ BO_ 258 "BMS EMSs";
+CM_ SG_ 258 BMS_CMD_RESET_AH "AH Z?ler (BCM_Ah und BATT_DoD) zur?ksetzten. Vorbedingung: BMS_State = BMS_NLG_CHARGER";
+CM_ SG_ 258 BMS_CMD_FAN "Freigabe f? das Balancing ";
+CM_ SG_ 258 BMS_CMD_BALANCING_EN "Freigabe f? das Balancing ";
+CM_ SG_ 258 BMS_CMD_NLG_EN "Freigabe f? die NLG Steuerung ";
+CM_ SG_ 258 BMS_CMD_HW_EN "Freigabe f? die Hardware (Kl15)";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","not_used","not_used","not_used","not_used","Cyclic","not_used","IfActive","NoMsgSendType";
+BA_DEF_ BU_  "NmStationAddress" HEX 0 0;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_ "DBName" "CANTemplate";
+BA_ "NmStationAddress" BU_ BCM 33;
+BA_ "NmStationAddress" BU_ IC 23;
+BA_ "GenMsgSendType" BO_ 339 0;
+BA_ "GenMsgCycleTime" BO_ 339 10;
+BA_ "GenMsgSendType" BO_ 1073 0;
+BA_ "GenMsgCycleTime" BO_ 1073 20;
+BA_ "GenMsgSendType" BO_ 336 0;
+BA_ "GenMsgCycleTime" BO_ 336 20;
+BA_ "GenMsgSendType" BO_ 512 0;
+BA_ "GenMsgCycleTime" BO_ 512 20;
+BA_ "GenMsgSendType" BO_ 513 0;
+BA_ "GenMsgCycleTime" BO_ 513 20;
+BA_ "GenMsgSendType" BO_ 514 0;
+BA_ "GenMsgCycleTime" BO_ 514 20;
+BA_ "GenMsgSendType" BO_ 768 0;
+BA_ "GenMsgCycleTime" BO_ 768 5;
+BA_ "GenMsgSendType" BO_ 769 0;
+BA_ "GenMsgCycleTime" BO_ 769 5;
+BA_ "GenMsgSendType" BO_ 770 0;
+BA_ "GenMsgCycleTime" BO_ 770 5;
+BA_ "GenMsgCycleTime" BO_ 256 10;
+BA_ "GenMsgSendType" BO_ 256 0;
+BA_ "GenMsgCycleTime" BO_ 272 10;
+BA_ "GenMsgSendType" BO_ 272 0;
+BA_ "GenMsgSendType" BO_ 273 0;
+BA_ "GenMsgCycleTime" BO_ 273 10;
+BA_ "GenMsgSendType" BO_ 258 0;
+BA_ "GenMsgCycleTime" BO_ 258 10;
+VAL_ 256 BMS_State 7 "BMS_BALANCING" 6 "BMS_SHUTDOWN" 5 "BMS_NLG_CHARGER" 4 "BMS_ACTIVE" 3 "BMS_PRECHARGE" 2 "BMS_STANDBY" 1 "BMS_INITIALIZE" 0 "BMS_SLEEP" ;
+VAL_ 256 BMS_ChargeState 7 "NLG_CHARGE_END" 6 "NLG_CHARGE_STOP" 5 "NLG_CHARGE_FLOAT" 4 "NLG_CHARGE_EQUALIZING" 3 "NLG_CHARGE_BULK" 2 "NLG_CHARGE_SOFT" 1 "NLG_CHARGE_START" 0 "NLG_OFF" ;
+VAL_ 258 BMS_CMD_FAN 11 "FAN 100%" 10 "FAN 90%" 9 "FAN 80%" 8 "FAN 70%" 7 "FAN 60%" 6 "FAN 50%" 5 "FAN 40%" 4 "FAN 30%" 3 "FAN 20%" 2 "FAN 10%" 1 "FAN off" 0 "Automatic" ;
+

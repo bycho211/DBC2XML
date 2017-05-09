@@ -1,0 +1,1288 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: IMMO AWD_2STOD GW HVAC SRS TPMS IC BCM AWD_2SPT AWD_SSTOD SAS ESP ABS TCU EMS
+
+
+BO_ 928 IMMO3: 8 IMMO
+ SG_ IMMO_ImmoLampSts : 0|2@1+ (1,0) [0|3] ""  IC
+
+BO_ 531 ESP4: 8 ESP
+ SG_ ESP_VehDynYawRateValid : 53|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_SSTOD
+ SG_ ESP_LongitudeACCValid : 54|1@0+ (1,0) [0|1] ""  TCU
+ SG_ ESP_LateralACCValid : 55|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_SSTOD,TCU
+ SG_ ESP_VehDynYawRate : 39|16@0- (0.0021326,0) [-69.8810368|69.8789042] "rad/s"  AWD_2STOD,AWD_SSTOD
+ SG_ ESP_LongitudeACC : 23|16@0- (0.027127,0) [-888.897536|888.870409] "m/s2"  TCU
+ SG_ ESP_LateralACC : 7|16@0- (0.027127,0) [-888.897536|888.870409] "m/s2"  AWD_2STOD,AWD_SSTOD,TCU
+
+BO_ 339 IC_CFGBKP: 8 IC
+ SG_ IC_CFG_Reserved2_Backup : 55|4@0+ (1,0) [0|15] ""  BCM
+ SG_ IC_CFG_Reserved1_Backup : 50|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_KeyStudy_Backup : 63|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_AlarmLampStatus_Backup : 62|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_ModeOfRearRainBrush_Bck : 61|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_RearRainBrush_Backup : 60|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_HomeFollowLamp_Backup : 59|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_SpeedLock_Backup : 58|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_TrumpStatus_Backup : 57|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_UnlockType_Backup : 56|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_RKE_Backup : 51|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_DRL_Backup : 49|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_AutoUnlock_Backup : 48|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_BcmRestTime_Backup : 47|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_TurnLamp_Backup : 46|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_LittleLamp_Backup : 45|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_DriverWindowType_Backup : 44|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_WheelBase_Backup : 35|2@0+ (1,0) [0|3] ""  BCM
+ SG_ IC_CFG_VehicleType_Backup : 21|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_VehicleLine_Backup : 20|2@0+ (1,0) [0|3] ""  BCM
+ SG_ IC_CFG_TransType_Backup : 30|3@0+ (1,0) [0|7] ""  BCM
+ SG_ IC_CFG_TPMS_Backup : 13|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_TireSize_Backup : 42|3@0+ (1,0) [0|7] ""  BCM
+ SG_ IC_CFG_TCU_Backup : 14|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_SRS_Backup : 12|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_SAS_Backup : 11|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_RAxleRatio_Backup : 39|2@0+ (1,0) [0|3] ""  BCM
+ SG_ IC_CFG_PrSteering_Backup : 37|2@0+ (1,0) [0|3] ""  BCM
+ SG_ IC_CFG_IMMO_Backup : 10|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_IC_Backup : 9|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_HVAC_Backup : 15|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_GateWay_Backup : 8|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_FuelType_Backup : 23|2@0+ (1,0) [0|3] ""  BCM
+ SG_ IC_CFG_FrontAxleDisconnect_Bk : 43|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_ESP_Backup : 7|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_EngineType_Backup : 27|4@0+ (1,0) [0|15] ""  BCM
+ SG_ IC_CFG_EMSGasoline_Backup : 6|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_EMSDiesel_Backup : 5|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_EnicDifferential_Bk : 31|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_CountryCode_Backup : 18|3@0+ (1,0) [0|7] ""  BCM
+ SG_ IC_CFG_ConfigConfirmedSts : 1|2@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_BodyStyle_Backup : 33|2@0+ (1,0) [0|3] ""  BCM
+ SG_ IC_CFG_BCM_Backup : 4|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_AWD_Backup : 3|1@0+ (1,0) [0|1] ""  BCM
+ SG_ IC_CFG_ABS_Backup : 2|1@0+ (1,0) [0|1] ""  BCM
+
+BO_ 336 BCM_CFG: 8 BCM
+ SG_ BCM_CFG_Reserved2 : 55|4@0+ (1,0) [0|15] ""  IC
+ SG_ BCM_CFG_Reserved1 : 50|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_KeyStudy : 63|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_AlarmLampStatus : 62|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_ModeOfRearRainBrush : 61|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_RearRainBrush : 60|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_HomeFollowLamp : 59|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_SpeedLock : 58|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_TrumpStatus : 57|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_UnlockType : 56|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_RKE : 51|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_DRL : 49|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_AutoUnlock : 48|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_BcmRestTime : 47|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_TurnLamp : 46|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_LittleLamp : 45|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_DriverWindowType : 44|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_HVAC : 15|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_WheelBase : 35|2@0+ (1,0) [0|3] ""  IC
+ SG_ BCM_CFG_VehicleType : 21|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_VehicleLine : 20|2@0+ (1,0) [0|3] ""  IC
+ SG_ BCM_CFG_TransmissionType : 30|3@0+ (1,0) [0|7] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,IC
+ SG_ BCM_CFG_TPMS : 13|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_TireSize : 42|3@0+ (1,0) [0|7] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,IC
+ SG_ BCM_CFG_TCU : 14|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_SRS : 12|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,IC
+ SG_ BCM_CFG_SAS : 11|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,IC
+ SG_ BCM_CFG_RearAxleRatio : 39|2@0+ (1,0) [0|3] ""  IC
+ SG_ BCM_CFG_PowerSteering : 37|2@0+ (1,0) [0|3] ""  IC
+ SG_ BCM_CFG_IMMO : 10|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_IC : 9|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_GateWay : 8|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_FuelType : 23|2@0+ (1,0) [0|3] ""  IC
+ SG_ BCM_CFG_FrontAxleDisconnect : 43|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,IC
+ SG_ BCM_CFG_ESP : 7|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,IC
+ SG_ BCM_CFG_EngineType : 27|4@0+ (1,0) [0|15] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,IC
+ SG_ BCM_CFG_EMSGasoline : 6|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_EMSDiesel : 5|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_EnicDifferential : 31|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_CountryCode : 18|3@0+ (1,0) [0|7] ""  IC
+ SG_ BCM_CFG_ConfigConfirmedSts : 1|2@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_BodyStyle : 33|2@0+ (1,0) [0|3] ""  IC
+ SG_ BCM_CFG_BCM : 4|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_AWD : 3|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_CFG_ABS : 2|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,IC
+
+BO_ 1077 HVAC: 8 HVAC
+ SG_ HVAC_RearDefrogRequest : 23|1@0+ (1,0) [0|1] ""  BCM
+ SG_ HVAC_MiddlePressureSwitch : 15|1@0+ (1,0) [0|1] ""  EMS,GW
+ SG_ HVAC_ACrequest : 7|1@0+ (1,0) [0|1] ""  EMS,GW
+
+BO_ 797 SRS: 8 SRS
+ SG_ SRS_CrashOutputSts : 31|8@0+ (1,0) [0|0] ""  BCM
+ SG_ SRS_SBRfromSRSvalid : 8|1@0+ (1,0) [0|1] ""  IC
+ SG_ SRS_SBR_Passenger : 7|2@0+ (1,0) [0|3] ""  IC
+ SG_ SRS_SBR_Driver : 5|2@0+ (1,0) [0|3] ""  IC
+ SG_ SRS_PsngrBagSts : 3|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ SRS_AirBagFailSts : 1|2@0+ (1,0) [0|3] ""  IC
+
+BO_ 1307 TPMS: 8 TPMS
+ SG_ TPMS_TyreTempStatus : 7|2@0+ (1,0) [0|3] ""  IC
+ SG_ TPMS_TyreTemperature : 23|8@0+ (1,-40) [0|105] "¡æ"  IC
+ SG_ TPMS_TyrePressureStatus : 10|3@0+ (1,0) [0|7] ""  IC
+ SG_ TPMS_TyrePressure : 31|8@0+ (0.025,0) [0|6.4] "bar"  IC
+ SG_ TPMS_TyrePosition : 12|2@0+ (1,0) [0|3] ""  IC
+ SG_ TPMS_RRSensorLearnStatus : 4|1@0+ (1,0) [0|1] ""  IC
+ SG_ TPMS_RFSensorLearnStatus : 2|1@0+ (1,0) [0|1] ""  IC
+ SG_ TPMS_LRSensorLearnStatus : 5|1@0+ (1,0) [0|1] ""  IC
+ SG_ TPMS_LFSensorLearnStatus : 3|1@0+ (1,0) [0|1] ""  IC
+ SG_ TPMS_TPMSLearnStatus : 1|2@0+ (1,0) [0|3] ""  IC
+
+BO_ 1073 IC: 8 IC
+ SG_ IC_VehicleSpeedVSOSig : 34|16@0+ (0.00390625,0) [0|0] "km/h"  BCM,AWD_2SPT,EMS,GW,HVAC
+ SG_ IC_TotalOdometer_km : 22|20@0+ (1,0) [0|0] "km"  SRS
+ SG_ IC_FuelVolume : 14|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ IC_Vacuum : 15|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ IC_AirbagAlarmLampStatus : 7|2@0+ (1,0) [0|3] ""  SRS
+ SG_ IC_DriverSeatBeltStatus : 5|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ IC_PassSeatBeltStatus : 4|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ IC_BrakeFluildLevel : 3|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ IC_AirFilter : 2|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ IC_FrontClutchSts : 1|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ IC_ParkBrake : 0|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,ESP
+
+BO_ 914 BCM: 8 BCM
+ SG_ BCM_BackDoorStatus : 20|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_ACMiddlePressureSwitch : 29|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BCM_ACrequest : 10|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BCM_SportMode : 13|1@0+ (1,0) [0|1] ""  IC,GW,EMS,TCU
+ SG_ BCM_WinterMode : 12|1@0+ (1,0) [0|1] ""  IC,GW,EMS,TCU
+ SG_ BCM_RearLeftDoorStatus : 19|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_AmbientTemperature : 39|8@0+ (0.5,-48) [-48|79] "¡æ"  AWD_2STOD,AWD_SSTOD,HVAC,TCU
+ SG_ BCM_ReverseGearSwitch : 27|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,ESP,IC
+ SG_ BCM_KeyInStatus : 28|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_KeyPosition : 26|2@0+ (1,0) [0|3] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,EMS,GW,HVAC,TPMS
+ SG_ BCM_RearDefrost : 24|1@0+ (1,0) [0|1] ""  EMS
+ SG_ BCM_FrontFogStatus : 23|1@0+ (1,0) [0|1] ""  EMS,IC
+ SG_ BCM_RearWipperSwitchStatus : 22|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_RearFogStatus : 21|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_RearRightDoorStatus : 18|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_HoodStatus : 17|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_FrontRightDoorStatus : 16|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_FrontLeftDoorStatus : 15|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_PassangerWindowInhibit : 14|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_LowBeamStatus : 11|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ BCM_HighBeamStatus : 9|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_ParkingLightStatus : 8|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_HazardStatus : 7|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_TurnLeftStatus : 6|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_TurnRightStatus : 5|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_DayRunningLightStatus : 4|1@0+ (1,0) [0|1] ""  EMS,GW,IC
+ SG_ BCM_KeyReminder : 3|1@0+ (1,0) [0|0] ""  IC
+ SG_ BCM_ParkingLightReminder : 2|1@0+ (1,0) [0|1] ""  IC
+ SG_ BCM_AlarmMode : 1|2@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 1064 AWD: 8 AWD_SSTOD
+ SG_ AWD_EstimatedTorque : 47|16@0+ (0.25,0) [0|3000] "Nm"  ESP
+ SG_ AWD_ShiftMotorPosition : 35|4@0+ (1,0) [0|15] "" Vector__XXX
+ SG_ AWD_EngineLimitingRequest : 31|12@0+ (0.25,0) [0|1000] "Nm"  EMS,GW
+ SG_ AWD_EngineLimitingEnable : 23|1@0+ (1,0) [0|0] ""  EMS,GW
+ SG_ AWD_TCMMessagesMissing : 20|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AWD_BCMMessagesMissing : 19|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AWD_ECMMessagesMissing : 18|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AWD_ClutchCircuitFaultSts : 17|2@0+ (1,0) [0|0] ""  ESP
+ SG_ AWD_ExternalRequestIgnored : 15|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AWD_DiagnosticLampRequest : 14|1@0+ (1,0) [0|0] ""  IC
+ SG_ AWD_ShiftSysEncoderFault : 13|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AWD_ShiftSystemStuckInLow : 12|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AWD_ShiftSysActuatorFault : 11|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AWD_CouplingTherFailsaf : 10|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AWD_CouplingFaultStatus : 9|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AWD_ModeChangeInProgress : 7|1@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ AWD_SystemOperatingMode : 6|4@0+ (1,0) [0|0] ""  ESP,IC
+ SG_ AWD_SystemType : 2|3@0+ (1,0) [0|0] ""  IC
+
+BO_ 544 SAS: 8 SAS
+ SG_ SAS_CHK_SUM : 35|4@0+ (1,0) [0|0] ""  ESP
+ SG_ SAS_MSG_CNT : 39|4@0+ (1,0) [0|0] ""  ESP
+ SG_ SAS_SASFailureSts : 31|1@0+ (1,0) [0|0] ""  ESP,TCU
+ SG_ SAS_CAL : 30|1@0+ (1,0) [0|0] ""  ESP
+ SG_ SAS_TRIM : 29|1@0+ (1,0) [0|0] ""  ESP
+ SG_ SAS_SASInternalStsFlg : 28|5@0+ (1,0) [0|0] ""  ESP
+ SG_ SAS_LWS_Speed : 23|8@0+ (4,0) [0|1016] "¡ã/s"  ESP
+ SG_ SAS_LWS_Angle : 7|16@0- (0.1,0) [0|0] "¡ã"  AWD_2STOD,AWD_SSTOD,ESP,TCU
+
+BO_ 529 ESP3: 8 ESP
+ SG_ ESP_ShiftInhibit : 11|1@0+ (1,0) [0|1] ""  TCU
+ SG_ ESP_TOD_TorqueMaxLimit : 55|12@0+ (1,0) [0|4094] "Nm"  AWD_2STOD,AWD_SSTOD
+ SG_ ESP_TOD_FastOpenRequest : 10|2@0+ (1,0) [0|0] ""  AWD_2STOD,AWD_SSTOD
+ SG_ ESP_CheckSum : 47|8@0+ (1,0) [0|0] ""  TCU,EMS,GW
+ SG_ ESP_MessageCounter : 7|4@0+ (1,0) [0|15] ""  IC,TCU,EMS,GW
+ SG_ ESP_DragTorConActive : 3|1@0+ (1,0) [0|0] ""  EMS,GW
+ SG_ ESP_EngTorReductionActive : 1|1@0+ (1,0) [0|0] ""  GW,EMS
+ SG_ ESP_TarReducedEngTorSlow : 39|8@0+ (0.392,0) [0|99.6] "%"  EMS
+ SG_ ESP_TarReducedEngTorFast : 31|8@0+ (0.392,0) [0|99.6] "%"  EMS,GW
+ SG_ ESP_TarIncreasedEngDragTorCon : 23|8@0+ (0.392,0) [0|99.6] "%"  EMS,GW
+ SG_ ESP_ESP_Off_PALA_Lamp : 2|1@0+ (1,0) [0|0] ""  TCU,IC
+ SG_ ESP_VDC_Fault : 12|1@0+ (1,0) [0|0] ""  IC,TCU
+ SG_ ESP_TCS_Fault : 8|1@0+ (1,0) [0|0] ""  IC,TCU
+ SG_ ESP_ESP_LampOn : 0|1@0+ (1,0) [0|0] ""  TCU,IC
+
+BO_ 746 ABS2_ESP2: 8 ABS
+ SG_ ABS_ESP_WssRREdgesSum : 55|16@0+ (1,0) [0|65535] ""  IC
+ SG_ ABS_ESP_WssRLEdgesSum : 39|16@0+ (1,0) [0|65535] ""  IC
+ SG_ ABS_ESP_RRWheelSpeed : 23|13@0+ (0.05625,0) [0|360] "km/h"  AWD_2STOD,EMS,GW,TCU,AWD_SSTOD,IC
+ SG_ ABS_ESP_RLWheelSpeed : 7|13@0+ (0.05625,0) [0|360] "km/h"  AWD_2STOD,EMS,GW,TCU,AWD_SSTOD,IC
+ SG_ ABS_ESP_RRWhSpeedValidData : 9|1@0+ (1,0) [0|0] ""  AWD_2STOD,EMS,GW,TCU,AWD_SSTOD,IC
+ SG_ ABS_ESP_RLWhSpeedValidData : 10|1@0+ (1,0) [0|0] ""  AWD_2STOD,EMS,GW,TCU,AWD_SSTOD,IC
+
+BO_ 785 ABS1_ESP1: 8 ESP
+ SG_ ABS_ESP_EBD_Fault : 24|1@0+ (1,0) [0|0] ""  IC
+ SG_ ABS_ESP_ABS_Fault : 25|1@0+ (1,0) [0|0] ""  AWD_2STOD,AWD_SSTOD,IC
+ SG_ ABS_ESP_ABS_Active : 26|1@0+ (1,0) [0|0] ""  IC,AWD_2STOD,AWD_SSTOD
+ SG_ ABS_ESP_VehSOSigValidData : 8|1@0+ (1,0) [0|0] ""  IC,EMS,GW,HVAC
+ SG_ ABS_ESP_VehicleSpeedVSOSig : 39|13@0+ (0.05625,0) [0|260] "km/h"  IC,EMS,GW,HVAC
+ SG_ ABS_ESP_FRWheelSpeed : 23|13@0+ (0.05625,0) [0|360] "km/h"  AWD_2STOD,EMS,GW,TCU,AWD_SSTOD,IC
+ SG_ ABS_ESP_FRWhSpeedValidData : 9|1@0+ (1,0) [0|0] ""  AWD_2STOD,EMS,GW,TCU,AWD_SSTOD,IC
+ SG_ ABS_ESP_FLWheelSpeed : 7|13@0+ (0.05625,0) [0|360] "km/h"  AWD_2STOD,EMS,GW,TCU,AWD_SSTOD,IC
+ SG_ ABS_ESP_FLWhSpeedValidData : 10|1@0+ (1,0) [0|0] ""  AWD_2STOD,EMS,GW,TCU,AWD_SSTOD,IC
+
+BO_ 1318 EMS6: 8 GW
+ SG_ EMS_HEST_Command : 34|3@0+ (1,0) [0|0] ""  IC
+ SG_ EMS_DPF_ActiveRegInh : 31|2@0+ (1,0) [0|0] ""  IC
+ SG_ EMS_DPF_Status : 29|3@0+ (1,0) [0|0] ""  IC
+ SG_ EMS_DPF_Command : 26|3@0+ (1,0) [0|0] ""  IC
+ SG_ EMS_DPF_Force : 23|2@0+ (1,0) [0|0] ""  IC
+ SG_ EMS_DPF_Inhibit : 21|2@0+ (1,0) [0|0] ""  IC
+ SG_ EMS_Diesel_Immobilizer : 19|2@0+ (1,0) [0|0] ""  IC
+ SG_ EMS_Diesel_DieselGlow : 17|2@0+ (1,0) [0|0] ""  IC
+ SG_ EMS_Diesel_OilPressureLow : 15|8@0+ (4,0) [0|1000] "kPa"  IC
+ SG_ EMS_Diesel_DieselSVS : 7|2@0+ (1,0) [0|0] ""  IC
+ SG_ EMS_Diesel_DieselStop : 5|2@0+ (1,0) [0|0] ""  IC
+ SG_ EMS_Diesel_DieselMIL : 3|2@0+ (1,0) [0|3] ""  IC
+ SG_ EMS_Diesel_WaterInFuel : 1|2@0+ (1,0) [0|3] ""  IC
+
+BO_ 1315 EMS4: 8 EMS
+ SG_ EMS_TorqueConstant : 63|8@0+ (10,0) [0|2540] "Nm"  AWD_2STOD,AWD_SSTOD,ESP,TCU
+ SG_ EMS_WarmUpCycle : 29|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EMS_MIL_LampSignal : 27|1@0+ (1,0) [0|1] ""  IC
+ SG_ EMS_FuelComsumptionInst : 23|8@0+ (0.1532,0) [0|38.91] "ml/s"  IC
+ SG_ EMS_ErrorEngCoolantTemp : 26|1@0+ (1,0) [0|1] ""  HVAC,IC,TCU
+ SG_ EMS_ErrorBatteryVoltage : 24|1@0+ (1,0) [0|1] ""  HVAC,IC
+ SG_ EMS_EngineSVSLampSignal : 28|1@0+ (1,0) [0|1] ""  IC
+ SG_ EMS_DrivingCycle : 25|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EMS_BatteryVoltage : 15|8@0+ (0.0683,0) [0|17.3482] "V"  HVAC,IC
+ SG_ EMS_EngineCoolantTemperature : 7|8@0+ (0.75,-48) [-48|142.5] "¡æ"  HVAC,IC,TCU
+
+BO_ 633 EMS3: 8 EMS
+ SG_ EMS_KeySwitchState : 43|1@0+ (1,0) [0|1] ""  TCU
+ SG_ EMS_IdleTargetSpeed : 31|8@0+ (10,0) [0|2540] "rpm" Vector__XXX
+ SG_ EMS_IdleSpeedStatus : 33|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EMS_ErrorEngineSpeedSignal : 32|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_SSTOD,ESP,IC,TCU
+ SG_ EMS_ErrorAcclerationPedal : 36|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_SSTOD,ESP,TCU
+ SG_ EMS_EngineFuelCutOff : 39|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EMS_CruiseControlStatus : 42|2@0+ (1,0) [0|3] ""  AWD_2STOD,AWD_SSTOD,ESP,IC,TCU
+ SG_ EMS_ClutchPedalStatus : 35|2@0+ (1,0) [0|3] ""  AWD_2STOD,AWD_2SPT,AWD_SSTOD,ESP
+ SG_ EMS_BrakePedleStatus : 38|2@0+ (1,0) [0|3] ""  AWD_2STOD,AWD_SSTOD,TCU
+ SG_ EMS_ACCompressureStatus : 40|1@0+ (1,0) [0|1] ""  HVAC
+ SG_ EMS_AccelerationPedalPosition : 23|8@0+ (0.392,0) [0|99.6] "%"  AWD_2STOD,AWD_SSTOD,ESP,TCU
+ SG_ EMS_EngineSpeedRPM : 7|16@0+ (0.25,0) [0|16383.5] "rpm"  AWD_2STOD,AWD_SSTOD,ESP,IC,TCU
+
+BO_ 417 TCU2: 8 TCU
+ SG_ TCU_VEHSPD_TCU : 39|16@0+ (0.01,0) [0|655.34] "km/h"  IC,EMS,GW
+ SG_ TCU_N_TC : 23|16@0+ (1,0) [0|0] "rpm" Vector__XXX
+ SG_ TCU_GEAR_RATIO : 15|8@0+ (1,0) [0|100] "%" Vector__XXX
+ SG_ TCU_TQI_TCU_enable : 3|2@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ TCU_TCU_TYPE : 1|2@0+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 416 TCU1: 8 TCU
+ SG_ TCU_TQI_TCU : 55|16@0+ (1,0) [0|0] "Nm"  GW,EMS
+ SG_ TCU_TEMP_AT : 47|8@0+ (1,0) [0|254] "¡æ"  GW,EMS,IC
+ SG_ TCU_TAR_GC : 39|4@0+ (1,0) [0|0] ""  GW,EMS,IC
+ SG_ TCU_CUR_GR : 35|4@0+ (1,0) [0|0] ""  AWD_2STOD,GW,AWD_2SPT,AWD_SSTOD,EMS,ESP,IC
+ SG_ TCU_ETL_TCU : 23|16@0+ (0.5,0) [0|32767] "Nm"  GW,EMS
+ SG_ TCU_G_SEL_DISP : 15|4@0+ (1,0) [0|0] ""  AWD_2STOD,GW,AWD_2SPT,AWD_SSTOD,EMS,ESP,IC
+ SG_ TCU_SWI_CC : 11|2@0+ (1,0) [0|0] ""  GW,EMS,ESP
+ SG_ TCU_SWI_GS : 9|1@0+ (1,0) [0|0] ""  GW,EMS,ESP,IC
+ SG_ TCU_MIL : 8|1@0+ (1,0) [0|0] ""  GW,EMS
+ SG_ TCU_FAN_CRTL_TCU : 7|2@0+ (1,0) [0|0] ""  GW,EMS
+ SG_ TCU_F_TCU : 5|2@0+ (1,0) [0|0] ""  IC
+ SG_ TCU_GearType : 3|4@0+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 257 EMS2: 8 EMS
+ SG_ EMS_ErrorThrottlePosition : 30|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EMS_ErrorPressureSensor : 31|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ EMS_IntakeAirTemperature : 23|8@0+ (1,-48) [-48|206] "¡æ" Vector__XXX
+ SG_ EMS_AltitudeFactor : 15|8@0+ (0.0156,0) [0|3.978] ""  TCU
+ SG_ EMS_ThrottlePosition : 7|8@0+ (0.392,0) [0|99.6] "%" Vector__XXX
+
+BO_ 251 EMS1: 8 EMS
+ SG_ EMS_ModifiedIndicatedEngTor : 63|8@0+ (0.392,0) [0|99.6] "%"  TCU
+ SG_ EMS_ModifiedIndDriverReqTor : 47|8@0+ (0.392,0) [0|99.6] "%"  TCU
+ SG_ EMS_EngineTorqueFailure : 48|1@0+ (1,0) [0|1] ""  AWD_2STOD,AWD_SSTOD,ESP,TCU
+ SG_ EMS_EngineTorqueLoss : 39|8@0+ (0.392,0) [0|99.6] "%"  AWD_2STOD,AWD_SSTOD,ESP,TCU
+ SG_ EMS_IndicatedMnimumTorque : 31|8@0+ (0.392,0) [0|99.6] "%" Vector__XXX
+ SG_ EMS_IndicatedMaximumTorque : 23|8@0+ (0.392,0) [0|99.6] "%"  ESP
+ SG_ EMS_IndicatedDriverRequestTorque : 15|8@0+ (0.392,0) [0|99.6] "%"  ESP,TCU
+ SG_ EMS_IndicatedEngineTorque : 7|8@0+ (0.392,0) [0|99.6] "%"  AWD_2STOD,AWD_SSTOD,ESP,TCU
+
+BO_TX_BU_ 1064 : AWD_2STOD,AWD_2SPT,AWD_SSTOD;
+BO_TX_BU_ 746 : ESP,ABS;
+BO_TX_BU_ 785 : ABS,ESP;
+BO_TX_BU_ 1315 : GW,EMS;
+BO_TX_BU_ 633 : GW,EMS;
+BO_TX_BU_ 257 : GW,EMS;
+BO_TX_BU_ 251 : GW,EMS;
+
+
+CM_ SG_ 531 ESP_VehDynYawRateValid "Status of yaw rate signal ";
+CM_ SG_ 531 ESP_LongitudeACCValid "Status of longitudinal acceleration signal";
+CM_ SG_ 531 ESP_LateralACCValid "Status of lateral acceleration signal";
+CM_ SG_ 531 ESP_VehDynYawRate "Yaw rate signal";
+CM_ SG_ 531 ESP_LongitudeACC "Longitudinal acceleration signal";
+CM_ SG_ 531 ESP_LateralACC "Lateral Acceleration signal";
+CM_ SG_ 339 IC_CFG_EnicDifferential_Bk "Electronic differential";
+CM_ SG_ 336 BCM_CFG_EnicDifferential "Electronic differential";
+CM_ SG_ 1077 HVAC_RearDefrogRequest "Sent by Automatic AC system.";
+CM_ SG_ 1077 HVAC_MiddlePressureSwitch "Sent by Automatic AC system.";
+CM_ SG_ 1077 HVAC_ACrequest "Sent by Automatic AC system.";
+CM_ SG_ 797 SRS_SBR_Passenger "Passenger Buckle status/SBR status";
+CM_ SG_ 797 SRS_SBR_Driver "Driver Buckle status/SBR status";
+CM_ SG_ 914 BCM_SportMode "Used by TCU.";
+CM_ SG_ 914 BCM_WinterMode "Used by TCU.";
+CM_ SG_ 914 BCM_ParkingLightStatus "Indicates the status of parking brake switch located on park brake handle.";
+CM_ SG_ 1064 AWD_EstimatedTorque "Estimated coupling torque used by ESP.";
+CM_ SG_ 1064 AWD_ShiftMotorPosition "Current Shift Motor Position.";
+CM_ SG_ 1064 AWD_EngineLimitingRequest "Max Torque Limit Commanded to Engine.Used for Active Single Speed(FWD).";
+CM_ SG_ 1064 AWD_EngineLimitingEnable "Enable bit for engine limiting.Used for Active Single Speed(FWD)";
+CM_ SG_ 1064 AWD_TCMMessagesMissing "Indicates if the signal send by transmission controller module is missing.";
+CM_ SG_ 1064 AWD_BCMMessagesMissing "Indicates if the message sent by Brake controler module(for PU201 the brake signal is sent by EMS) is missing.";
+CM_ SG_ 1064 AWD_ECMMessagesMissing "Indicates if the messages sent by Engine Controller Module  is missing.";
+CM_ SG_ 1064 AWD_ExternalRequestIgnored "Indicates if the external request are currently being accepted.";
+CM_ SG_ 1064 AWD_ShiftSysEncoderFault "Indicates when the Shift System Encoder has a fault.";
+CM_ SG_ 1064 AWD_ShiftSystemStuckInLow "Indicates when the Shift System has a fault and can not shift out of low.";
+CM_ SG_ 1064 AWD_ShiftSysActuatorFault "Indicates Shift System Actuator has a Fault.";
+CM_ SG_ 1064 AWD_CouplingTherFailsaf "Indicates that the system is shutdown due to thermal protection.";
+CM_ SG_ 1064 AWD_ModeChangeInProgress "Indicates the if the Mode change is in progress.";
+CM_ SG_ 1064 AWD_SystemOperatingMode "Indicates the current AWD Mode";
+CM_ SG_ 1064 AWD_SystemType "Indicates AWD system type.
+";
+CM_ SG_ 544 SAS_CHK_SUM "The signal indicates a checksum.
+temp_result=Byte0 XOR Byte1 XOR Byte2 XOR Byte3
+SASChksum=higher nibble(temp_result) XOR lower nibble(temp_result) XOR SASMsgCnt";
+CM_ SG_ 544 SAS_MSG_CNT "The signal indicates a free running message counter,which is incremented by 1 each time a CAN message has been transmitted by the sensor.";
+CM_ SG_ 544 SAS_SASFailureSts "Indicate the failure status of the steering angle sensor.";
+CM_ SG_ 544 SAS_CAL "Indicates the calibration status of the steering angle sensor.";
+CM_ SG_ 544 SAS_TRIM "Indicates the trimming status of the steering angle sensor done at BOSCH plants and is used by BOSCH internal only.";
+CM_ SG_ 544 SAS_SASInternalStsFlg "Sensor status.It's for BOSCH internal use only.";
+CM_ SG_ 544 SAS_LWS_Speed "Current rotation speed of the steering wheel.";
+CM_ SG_ 544 SAS_LWS_Angle "Current angle of the steering wheel.";
+CM_ SG_ 529 ESP_TOD_TorqueMaxLimit "Cardan shaft torque Maxim limit.";
+CM_ SG_ 529 ESP_ESP_Off_PALA_Lamp "Indication that if the switch ESC OFF used turn off ESP function is turned on.";
+CM_ SG_ 529 ESP_VDC_Fault "VDC is switched off due to dectected failur.The lamp ESC should be lighted and constant on.";
+CM_ SG_ 529 ESP_TCS_Fault "TCS is switched off due to dectected failur.The lamp ESC should be lighted and constant on.";
+CM_ SG_ 529 ESP_ESP_LampOn "Indication that ESP system VDC/TCS currently performs a brake lintervention. Lamp ESC show on dashboard and flash.";
+CM_ SG_ 746 ABS_ESP_WssRREdgesSum "Used for odometer calculation.";
+CM_ SG_ 746 ABS_ESP_WssRLEdgesSum "Used for odometer calculation";
+CM_ SG_ 746 ABS_ESP_RLWheelSpeed "Current speed information of rear left wheel.For ABS the valid range high is 260km/h,but for ESP it's 360.";
+CM_ SG_ 785 ABS_ESP_VehSOSigValidData "Quality/fault information to current vehicle speed information.";
+CM_ SG_ 785 ABS_ESP_VehicleSpeedVSOSig "It will be ox1FFF when the value is more that 260km/h";
+CM_ SG_ 785 ABS_ESP_FRWheelSpeed "Current wheel speed information of the front rignt wheel.For ABS the valid range high of the speed is 260km,but for ESP it's 360km.";
+CM_ SG_ 785 ABS_ESP_FRWhSpeedValidData "Quality/fault information to current wheel speed information of front left wheel.";
+CM_ SG_ 785 ABS_ESP_FLWheelSpeed "Current wheel speed information of front left wheel. For ABS the valid range high is 260km,but for ESP the valid range high is 360km.";
+CM_ SG_ 785 ABS_ESP_FLWhSpeedValidData "Quality/fault information to current wheel speed information of front left wheel.";
+CM_ SG_ 417 TCU_VEHSPD_TCU "Vehicle speed calculated by TCU as a function of transmission output speed.";
+CM_ SG_ 417 TCU_N_TC "Torque converter turbine speed";
+CM_ SG_ 417 TCU_GEAR_RATIO "Gear transmission ratio(gearbox input speed(turbine)/gearbox output speed(turbine))";
+CM_ SG_ 417 TCU_TQI_TCU_enable "Type of tequested torque reduction(only for diesel)";
+CM_ SG_ 417 TCU_TCU_TYPE "Information about the type of transmission";
+CM_ SG_ 416 TCU_TQI_TCU "TCU requested engine torque reduction.";
+CM_ SG_ 416 TCU_TEMP_AT "Temperature of ATF";
+CM_ SG_ 416 TCU_TAR_GC "No gear change active(SWI_GS=00:Currently engaged gear.
+Gear change active(SWI_GS=1:Target gear.";
+CM_ SG_ 416 TCU_CUR_GR "Currently engaged gear";
+CM_ SG_ 416 TCU_ETL_TCU "TCU requested engine torque limit(ETL).In the engine this values have to be considered by the torque limitation,so that this limit never will be passed.
+";
+CM_ SG_ 416 TCU_G_SEL_DISP "Gear seletor position";
+CM_ SG_ 416 TCU_SWI_CC "State of converter lockup clutch";
+CM_ SG_ 416 TCU_SWI_GS "Gearchange active";
+CM_ SG_ 416 TCU_MIL "Request to turn on the MIL";
+CM_ SG_ 416 TCU_FAN_CRTL_TCU "Cooling fan control request
+EMS will treat mid speed request same as high speed. Low speed TCU=Low speed EMS,Middle speed TCU=High speed EMS,High speed TCU=High speed EMS.";
+CM_ SG_ 416 TCU_F_TCU "TCU fault status";
+BA_DEF_ SG_  "GenSigAltSetting" STRING ;
+BA_DEF_ SG_  "GenSigAssignSetting" STRING ;
+BA_DEF_ SG_  "GenSigConditionalSend" STRING ;
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigEnvVarType" ENUM  "int","float","undef";
+BA_DEF_ SG_  "GenSigPostIfSetting" STRING ;
+BA_DEF_ SG_  "GenSigPostSetting" STRING ;
+BA_DEF_ SG_  "GenSigPreIfSetting" STRING ;
+BA_DEF_ SG_  "GenSigPreSetting" STRING ;
+BA_DEF_ SG_  "GenSigReceiveSetting" STRING ;
+BA_DEF_ SG_  "SignalAge" STRING ;
+BA_DEF_ SG_  "GenSigTimeoutTime_IC" INT 0 65535;
+BA_DEF_ SG_  "GenSigTimeoutMsg_IC" HEX 0 536870911;
+BA_DEF_ BO_  "DiagRequest" ENUM  "no","yes";
+BA_DEF_ BO_  "DiagResponse" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgAltSetting" STRING ;
+BA_DEF_ BO_  "GenMsgConditionalSend" STRING ;
+BA_DEF_ BO_  "GenMsgEVName" STRING ;
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 0;
+BA_DEF_ BO_  "GenMsgPostIfSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPostSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPreIfSetting" STRING ;
+BA_DEF_ BO_  "GenMsgPreSetting" STRING ;
+BA_DEF_ BO_  "Period" STRING ;
+BA_DEF_ BO_  "Type" STRING ;
+BA_DEF_ BU_  "Diagnose-Stationsadresse" HEX 0 255;
+BA_DEF_ BU_  "GenNodSleepTime" INT 0 1000000;
+BA_DEF_ BU_  "ILUsed" ENUM  "No","Yes";
+BA_DEF_ BU_  "TpCanBus" INT 1 2;
+BA_DEF_ BU_  "TpNodeBaseAddress" HEX 0 33554431;
+BA_DEF_ BU_  "TpRxIdentifier" HEX 0 536870911;
+BA_DEF_ BU_  "TpRxMask" HEX 0 65535;
+BA_DEF_ BU_  "TpTxIdentifier" HEX 0 536870911;
+BA_DEF_ BU_  "TpUseFC" INT 0 1;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "GenEnvVarEndingDsp" STRING ;
+BA_DEF_  "GenEnvVarEndingSnd" STRING ;
+BA_DEF_  "GenEnvVarPrefix" STRING ;
+BA_DEF_  "GenNWMApCanOff" STRING ;
+BA_DEF_  "GenNWMApCanOn" STRING ;
+BA_DEF_  "GenNWMApCanSleep" STRING ;
+BA_DEF_  "GenNWMGotoMode_Awake" STRING ;
+BA_DEF_  "GenNWMGotoMode_BusSleep" STRING ;
+BA_DEF_  "GenNWMSleepTime" INT 0 1000000;
+BA_DEF_  "GenNWMTalkNM" STRING ;
+BA_DEF_  "NWM-Basisadresse 1" HEX 1024 1055;
+BA_DEF_  "NWM-Basisadresse 2" HEX 1024 1055;
+BA_DEF_  "NWM-Basisadresse 3" HEX 1024 1055;
+BA_DEF_  "NWM-Basisadresse 4" HEX 1024 1055;
+BA_DEF_  "Manufacturer" STRING ;
+BA_DEF_  "NmType" STRING ;
+BA_DEF_  "Baudrate" INT 0 1000000;
+BA_DEF_  "ILTxTimeout" INT 0 65535;
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed";
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 100000;
+BA_DEF_ SG_  "NWM-WakeupAllowed" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Cyclic","NotUsed","NotUsed","NotUsed","NotUsed","Cyclic","NotUsed","IfActive","NoMsgSendType","NotUsed","vector_leerstring";
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 999999;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 50000;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 50000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "NmMessage" ENUM  "no","yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 65535;
+BA_DEF_ BU_  "NmStationAddress" INT 0 63;
+BA_DEF_ BU_  "NmNode" ENUM  "no","yes";
+BA_DEF_  "NmBaseAddress" HEX 1024 1087;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 10000;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_  "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_  "CANoeDrift" INT 0 0;
+BA_DEF_ BU_  "CANoeStartDelay" INT 0 0;
+BA_DEF_DEF_  "GenSigAltSetting" "";
+BA_DEF_DEF_  "GenSigAssignSetting" "";
+BA_DEF_DEF_  "GenSigConditionalSend" "";
+BA_DEF_DEF_  "GenSigEVName" "";
+BA_DEF_DEF_  "GenSigEnvVarType" "undef";
+BA_DEF_DEF_  "GenSigPostIfSetting" "";
+BA_DEF_DEF_  "GenSigPostSetting" "";
+BA_DEF_DEF_  "GenSigPreIfSetting" "";
+BA_DEF_DEF_  "GenSigPreSetting" "";
+BA_DEF_DEF_  "GenSigReceiveSetting" "";
+BA_DEF_DEF_  "SignalAge" "";
+BA_DEF_DEF_  "GenSigTimeoutTime_IC" 1000;
+BA_DEF_DEF_  "GenSigTimeoutMsg_IC" 0;
+BA_DEF_DEF_  "DiagRequest" "no";
+BA_DEF_DEF_  "DiagResponse" "no";
+BA_DEF_DEF_  "GenMsgAltSetting" "";
+BA_DEF_DEF_  "GenMsgConditionalSend" "";
+BA_DEF_DEF_  "GenMsgEVName" "";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenMsgPostIfSetting" "";
+BA_DEF_DEF_  "GenMsgPostSetting" "";
+BA_DEF_DEF_  "GenMsgPreIfSetting" "";
+BA_DEF_DEF_  "GenMsgPreSetting" "";
+BA_DEF_DEF_  "Period" "";
+BA_DEF_DEF_  "Type" "";
+BA_DEF_DEF_  "Diagnose-Stationsadresse" 0;
+BA_DEF_DEF_  "GenNodSleepTime" 0;
+BA_DEF_DEF_  "ILUsed" "Yes";
+BA_DEF_DEF_  "TpCanBus" 1;
+BA_DEF_DEF_  "TpNodeBaseAddress" 1536;
+BA_DEF_DEF_  "TpRxIdentifier" 1;
+BA_DEF_DEF_  "TpRxMask" 255;
+BA_DEF_DEF_  "TpTxIdentifier" 1;
+BA_DEF_DEF_  "TpUseFC" 1;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "GenEnvVarEndingDsp" "Dsp_";
+BA_DEF_DEF_  "GenEnvVarEndingSnd" "_";
+BA_DEF_DEF_  "GenEnvVarPrefix" "Env";
+BA_DEF_DEF_  "GenNWMApCanOff" "apCanOff()";
+BA_DEF_DEF_  "GenNWMApCanOn" "apCanOn()";
+BA_DEF_DEF_  "GenNWMApCanSleep" "apCanSleep()";
+BA_DEF_DEF_  "GenNWMGotoMode_Awake" "GotoMode_Awake()";
+BA_DEF_DEF_  "GenNWMGotoMode_BusSleep" "GotoMode_BusSleep()";
+BA_DEF_DEF_  "GenNWMSleepTime" 0;
+BA_DEF_DEF_  "GenNWMTalkNM" "TalkNM()";
+BA_DEF_DEF_  "NWM-Basisadresse 1" 1024;
+BA_DEF_DEF_  "NWM-Basisadresse 2" 1032;
+BA_DEF_DEF_  "NWM-Basisadresse 3" 1040;
+BA_DEF_DEF_  "NWM-Basisadresse 4" 1048;
+BA_DEF_DEF_  "Manufacturer" "Vector";
+BA_DEF_DEF_  "NmType" "";
+BA_DEF_DEF_  "Baudrate" 125000;
+BA_DEF_DEF_  "ILTxTimeout" 0;
+BA_DEF_DEF_  "GenSigSendType" "Cyclic";
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "NWM-WakeupAllowed" "";
+BA_DEF_DEF_  "GenMsgSendType" "NoMsgSendType";
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "NmMessage" "no";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "NmNode" "no";
+BA_DEF_DEF_  "NmBaseAddress" 1024;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "CANoeJitterMax" 0;
+BA_DEF_DEF_  "CANoeJitterMin" 0;
+BA_DEF_DEF_  "CANoeDrift" 0;
+BA_DEF_DEF_  "CANoeStartDelay" 0;
+BA_ "Manufacturer" "Vector";
+BA_ "BusType" "CAN";
+BA_ "Baudrate" 500000;
+BA_ "DBName" "Foton_0";
+BA_ "ECU" BU_ IMMO "IMMO";
+BA_ "ECU" BU_ AWD_2STOD "AWD_2STOD";
+BA_ "ECU" BU_ GW "GW";
+BA_ "ECU" BU_ HVAC "HVAC";
+BA_ "ECU" BU_ SRS "SRS";
+BA_ "ECU" BU_ TPMS "TPMS";
+BA_ "ECU" BU_ IC "IC";
+BA_ "NmStationAddress" BU_ IC 23;
+BA_ "ILUsed" BU_ IC 1;
+BA_ "NmStationAddress" BU_ BCM 33;
+BA_ "ECU" BU_ BCM "BCM";
+BA_ "ECU" BU_ AWD_2SPT "AWD_2SPT";
+BA_ "ECU" BU_ AWD_SSTOD "AWD_SSTOD";
+BA_ "ECU" BU_ SAS "SAS";
+BA_ "ECU" BU_ ESP "ESP";
+BA_ "NmStationAddress" BU_ ABS 11;
+BA_ "ECU" BU_ ABS "ABS";
+BA_ "ECU" BU_ TCU "TCU";
+BA_ "ECU" BU_ EMS "EMS";
+BA_ "GenMsgSendType" BO_ 928 0;
+BA_ "GenMsgCycleTime" BO_ 928 100;
+BA_ "GenMsgCycleTime" BO_ 339 2000;
+BA_ "GenMsgSendType" BO_ 339 0;
+BA_ "GenMsgCycleTime" BO_ 336 2000;
+BA_ "GenMsgSendType" BO_ 336 0;
+BA_ "GenMsgCycleTime" BO_ 797 500;
+BA_ "GenMsgSendType" BO_ 797 0;
+BA_ "GenMsgCycleTime" BO_ 1307 500;
+BA_ "GenMsgSendType" BO_ 1307 0;
+BA_ "GenMsgCycleTime" BO_ 1073 20;
+BA_ "GenMsgSendType" BO_ 1073 0;
+BA_ "GenMsgCycleTime" BO_ 914 20;
+BA_ "GenMsgSendType" BO_ 914 0;
+BA_ "GenMsgCycleTime" BO_ 1064 20;
+BA_ "GenMsgSendType" BO_ 1064 0;
+BA_ "GenMsgCycleTime" BO_ 529 20;
+BA_ "GenMsgSendType" BO_ 529 0;
+BA_ "GenMsgCycleTime" BO_ 746 20;
+BA_ "GenMsgSendType" BO_ 746 0;
+BA_ "GenMsgCycleTime" BO_ 785 20;
+BA_ "GenMsgSendType" BO_ 785 0;
+BA_ "GenMsgCycleTime" BO_ 1318 50;
+BA_ "GenMsgSendType" BO_ 1318 0;
+BA_ "GenMsgCycleTime" BO_ 1315 100;
+BA_ "GenMsgSendType" BO_ 1315 0;
+BA_ "GenMsgSendType" BO_ 633 0;
+BA_ "GenMsgCycleTime" BO_ 633 10;
+BA_ "GenMsgSendType" BO_ 417 0;
+BA_ "GenMsgCycleTime" BO_ 417 10;
+BA_ "GenMsgCycleTime" BO_ 416 10;
+BA_ "GenMsgSendType" BO_ 416 0;
+BA_ "GenMsgSendType" BO_ 257 0;
+BA_ "GenMsgCycleTime" BO_ 257 10;
+BA_ "GenMsgSendType" BO_ 251 0;
+BA_ "GenMsgCycleTime" BO_ 251 10;
+BA_ "GenSigTimeoutTime_IC" SG_ 928 IMMO_ImmoLampSts 500;
+BA_ "GenSigSendType" SG_ 928 IMMO_ImmoLampSts 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 531 ESP_VehDynYawRateValid 100;
+BA_ "GenSigSendType" SG_ 531 ESP_VehDynYawRateValid 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 531 ESP_LongitudeACCValid 100;
+BA_ "GenSigSendType" SG_ 531 ESP_LongitudeACCValid 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 531 ESP_LateralACCValid 100;
+BA_ "GenSigSendType" SG_ 531 ESP_LateralACCValid 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 531 ESP_VehDynYawRate 100;
+BA_ "GenSigSendType" SG_ 531 ESP_VehDynYawRate 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 531 ESP_LongitudeACC 100;
+BA_ "GenSigSendType" SG_ 531 ESP_LongitudeACC 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 531 ESP_LateralACC 100;
+BA_ "GenSigSendType" SG_ 531 ESP_LateralACC 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_WheelBase_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_WheelBase_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_VehicleType_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_VehicleType_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_VehicleLine_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_VehicleLine_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_TransType_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_TransType_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_TPMS_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_TPMS_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_TireSize_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_TireSize_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_TCU_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_TCU_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_SRS_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_SRS_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_SAS_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_SAS_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_RAxleRatio_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_RAxleRatio_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_PrSteering_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_PrSteering_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_IMMO_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_IMMO_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_IC_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_IC_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_HVAC_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_HVAC_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_GateWay_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_GateWay_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_FuelType_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_FuelType_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_FrontAxleDisconnect_Bk 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_FrontAxleDisconnect_Bk 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_ESP_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_ESP_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_EngineType_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_EngineType_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_EMSGasoline_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_EMSGasoline_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_EMSDiesel_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_EMSDiesel_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_EnicDifferential_Bk 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_EnicDifferential_Bk 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_CountryCode_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_CountryCode_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_ConfigConfirmedSts 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_ConfigConfirmedSts 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_BodyStyle_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_BodyStyle_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_BCM_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_BCM_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_AWD_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_AWD_Backup 7;
+BA_ "GenSigTimeoutTime_IC" SG_ 339 IC_CFG_ABS_Backup 0;
+BA_ "GenSigSendType" SG_ 339 IC_CFG_ABS_Backup 7;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_Reserved2 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_Reserved2 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_Reserved1 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_Reserved1 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_KeyStudy 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_KeyStudy 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_AlarmLampStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_AlarmLampStatus 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_ModeOfRearRainBrush 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_ModeOfRearRainBrush 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_RearRainBrush 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_RearRainBrush 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_HomeFollowLamp 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_HomeFollowLamp 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_SpeedLock 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_SpeedLock 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_TrumpStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_TrumpStatus 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_UnlockType 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_UnlockType 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_RKE 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_RKE 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_DRL 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_DRL 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_AutoUnlock 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_AutoUnlock 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_BcmRestTime 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_BcmRestTime 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_TurnLamp 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_TurnLamp 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_LittleLamp 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_LittleLamp 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_DriverWindowType 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_DriverWindowType 10000;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_HVAC 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_HVAC 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_WheelBase 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_WheelBase 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_VehicleType 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_VehicleType 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_VehicleLine 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_VehicleLine 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_TransmissionType 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_TransmissionType 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_TPMS 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_TPMS 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_TireSize 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_TireSize 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_TCU 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_TCU 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_SRS 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_SRS 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_SAS 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_SAS 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_RearAxleRatio 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_RearAxleRatio 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_PowerSteering 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_PowerSteering 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_IMMO 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_IMMO 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_IC 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_IC 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_GateWay 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_GateWay 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_FuelType 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_FuelType 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_FrontAxleDisconnect 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_FrontAxleDisconnect 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_ESP 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_ESP 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_EngineType 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_EngineType 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_EMSGasoline 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_EMSGasoline 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_EMSDiesel 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_EMSDiesel 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_EnicDifferential 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_EnicDifferential 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_CountryCode 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_CountryCode 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_ConfigConfirmedSts 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_ConfigConfirmedSts 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_BodyStyle 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_BodyStyle 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_BCM 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_BCM 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_AWD 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_AWD 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 336 BCM_CFG_ABS 10000;
+BA_ "GenSigSendType" SG_ 336 BCM_CFG_ABS 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 797 SRS_CrashOutputSts 2500;
+BA_ "GenSigSendType" SG_ 797 SRS_CrashOutputSts 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 797 SRS_SBRfromSRSvalid 2500;
+BA_ "GenSigSendType" SG_ 797 SRS_SBRfromSRSvalid 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 797 SRS_SBR_Passenger 2500;
+BA_ "GenSigSendType" SG_ 797 SRS_SBR_Passenger 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 797 SRS_SBR_Driver 2500;
+BA_ "GenSigSendType" SG_ 797 SRS_SBR_Driver 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 797 SRS_PsngrBagSts 2500;
+BA_ "GenSigSendType" SG_ 797 SRS_PsngrBagSts 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 797 SRS_AirBagFailSts 2500;
+BA_ "GenSigSendType" SG_ 797 SRS_AirBagFailSts 0;
+BA_ "GenSigStartValue" SG_ 797 SRS_AirBagFailSts 2;
+BA_ "GenSigTimeoutTime_IC" SG_ 1307 TPMS_TyreTempStatus 2500;
+BA_ "GenSigSendType" SG_ 1307 TPMS_TyreTempStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1307 TPMS_TyreTemperature 2500;
+BA_ "GenSigSendType" SG_ 1307 TPMS_TyreTemperature 0;
+BA_ "GenSigStartValue" SG_ 1307 TPMS_TyreTemperature 40;
+BA_ "GenSigTimeoutTime_IC" SG_ 1307 TPMS_TyrePressureStatus 2500;
+BA_ "GenSigSendType" SG_ 1307 TPMS_TyrePressureStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1307 TPMS_TyrePressure 2500;
+BA_ "GenSigSendType" SG_ 1307 TPMS_TyrePressure 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1307 TPMS_TyrePosition 2500;
+BA_ "GenSigSendType" SG_ 1307 TPMS_TyrePosition 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1307 TPMS_RRSensorLearnStatus 2500;
+BA_ "GenSigSendType" SG_ 1307 TPMS_RRSensorLearnStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1307 TPMS_RFSensorLearnStatus 2500;
+BA_ "GenSigSendType" SG_ 1307 TPMS_RFSensorLearnStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1307 TPMS_LRSensorLearnStatus 2500;
+BA_ "GenSigSendType" SG_ 1307 TPMS_LRSensorLearnStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1307 TPMS_LFSensorLearnStatus 2500;
+BA_ "GenSigSendType" SG_ 1307 TPMS_LFSensorLearnStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1307 TPMS_TPMSLearnStatus 2500;
+BA_ "GenSigSendType" SG_ 1307 TPMS_TPMSLearnStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1073 IC_VehicleSpeedVSOSig 100;
+BA_ "GenSigSendType" SG_ 1073 IC_VehicleSpeedVSOSig 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1073 IC_TotalOdometer_km 100;
+BA_ "GenSigSendType" SG_ 1073 IC_TotalOdometer_km 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1073 IC_FuelVolume 100;
+BA_ "GenSigSendType" SG_ 1073 IC_FuelVolume 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1073 IC_Vacuum 100;
+BA_ "GenSigSendType" SG_ 1073 IC_Vacuum 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1073 IC_AirbagAlarmLampStatus 100;
+BA_ "GenSigSendType" SG_ 1073 IC_AirbagAlarmLampStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1073 IC_DriverSeatBeltStatus 100;
+BA_ "GenSigSendType" SG_ 1073 IC_DriverSeatBeltStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1073 IC_PassSeatBeltStatus 100;
+BA_ "GenSigSendType" SG_ 1073 IC_PassSeatBeltStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1073 IC_BrakeFluildLevel 100;
+BA_ "GenSigSendType" SG_ 1073 IC_BrakeFluildLevel 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1073 IC_AirFilter 100;
+BA_ "GenSigSendType" SG_ 1073 IC_AirFilter 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1073 IC_FrontClutchSts 100;
+BA_ "GenSigSendType" SG_ 1073 IC_FrontClutchSts 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1073 IC_ParkBrake 100;
+BA_ "GenSigSendType" SG_ 1073 IC_ParkBrake 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_BackDoorStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_BackDoorStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_ACMiddlePressureSwitch 100;
+BA_ "GenSigSendType" SG_ 914 BCM_ACMiddlePressureSwitch 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_ACrequest 100;
+BA_ "GenSigSendType" SG_ 914 BCM_ACrequest 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_SportMode 100;
+BA_ "GenSigSendType" SG_ 914 BCM_SportMode 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_WinterMode 100;
+BA_ "GenSigSendType" SG_ 914 BCM_WinterMode 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_RearLeftDoorStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_RearLeftDoorStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_AmbientTemperature 100;
+BA_ "GenSigSendType" SG_ 914 BCM_AmbientTemperature 0;
+BA_ "GenSigStartValue" SG_ 914 BCM_AmbientTemperature 96;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_ReverseGearSwitch 100;
+BA_ "GenSigSendType" SG_ 914 BCM_ReverseGearSwitch 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_KeyInStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_KeyInStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_KeyPosition 100;
+BA_ "GenSigSendType" SG_ 914 BCM_KeyPosition 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_RearDefrost 100;
+BA_ "GenSigSendType" SG_ 914 BCM_RearDefrost 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_FrontFogStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_FrontFogStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_RearWipperSwitchStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_RearWipperSwitchStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_RearFogStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_RearFogStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_RearRightDoorStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_RearRightDoorStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_HoodStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_HoodStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_FrontRightDoorStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_FrontRightDoorStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_FrontLeftDoorStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_FrontLeftDoorStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_PassangerWindowInhibit 100;
+BA_ "GenSigSendType" SG_ 914 BCM_PassangerWindowInhibit 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_LowBeamStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_LowBeamStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_HighBeamStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_HighBeamStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_ParkingLightStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_ParkingLightStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_HazardStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_HazardStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_TurnLeftStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_TurnLeftStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_TurnRightStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_TurnRightStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_DayRunningLightStatus 100;
+BA_ "GenSigSendType" SG_ 914 BCM_DayRunningLightStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_KeyReminder 100;
+BA_ "GenSigSendType" SG_ 914 BCM_KeyReminder 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_ParkingLightReminder 100;
+BA_ "GenSigSendType" SG_ 914 BCM_ParkingLightReminder 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 914 BCM_AlarmMode 100;
+BA_ "GenSigSendType" SG_ 914 BCM_AlarmMode 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_EstimatedTorque 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_EstimatedTorque 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_ShiftMotorPosition 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_ShiftMotorPosition 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_EngineLimitingRequest 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_EngineLimitingRequest 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_EngineLimitingEnable 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_EngineLimitingEnable 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_TCMMessagesMissing 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_TCMMessagesMissing 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_BCMMessagesMissing 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_BCMMessagesMissing 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_ECMMessagesMissing 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_ECMMessagesMissing 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_ClutchCircuitFaultSts 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_ClutchCircuitFaultSts 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_ExternalRequestIgnored 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_ExternalRequestIgnored 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_DiagnosticLampRequest 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_DiagnosticLampRequest 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_ShiftSysEncoderFault 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_ShiftSysEncoderFault 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_ShiftSystemStuckInLow 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_ShiftSystemStuckInLow 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_ShiftSysActuatorFault 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_ShiftSysActuatorFault 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_CouplingTherFailsaf 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_CouplingTherFailsaf 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_CouplingFaultStatus 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_CouplingFaultStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_ModeChangeInProgress 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_ModeChangeInProgress 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_SystemOperatingMode 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_SystemOperatingMode 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1064 AWD_SystemType 100;
+BA_ "GenSigSendType" SG_ 1064 AWD_SystemType 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_ShiftInhibit 100;
+BA_ "GenSigSendType" SG_ 529 ESP_ShiftInhibit 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_TOD_TorqueMaxLimit 100;
+BA_ "GenSigSendType" SG_ 529 ESP_TOD_TorqueMaxLimit 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_TOD_FastOpenRequest 100;
+BA_ "GenSigSendType" SG_ 529 ESP_TOD_FastOpenRequest 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_CheckSum 100;
+BA_ "GenSigSendType" SG_ 529 ESP_CheckSum 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_MessageCounter 100;
+BA_ "GenSigSendType" SG_ 529 ESP_MessageCounter 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_DragTorConActive 100;
+BA_ "GenSigSendType" SG_ 529 ESP_DragTorConActive 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_EngTorReductionActive 100;
+BA_ "GenSigSendType" SG_ 529 ESP_EngTorReductionActive 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_TarReducedEngTorSlow 100;
+BA_ "GenSigSendType" SG_ 529 ESP_TarReducedEngTorSlow 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_TarReducedEngTorFast 100;
+BA_ "GenSigSendType" SG_ 529 ESP_TarReducedEngTorFast 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_TarIncreasedEngDragTorCon 100;
+BA_ "GenSigSendType" SG_ 529 ESP_TarIncreasedEngDragTorCon 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_ESP_Off_PALA_Lamp 100;
+BA_ "GenSigSendType" SG_ 529 ESP_ESP_Off_PALA_Lamp 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_VDC_Fault 100;
+BA_ "GenSigSendType" SG_ 529 ESP_VDC_Fault 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_TCS_Fault 100;
+BA_ "GenSigSendType" SG_ 529 ESP_TCS_Fault 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 529 ESP_ESP_LampOn 100;
+BA_ "GenSigSendType" SG_ 529 ESP_ESP_LampOn 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 746 ABS_ESP_WssRREdgesSum 100;
+BA_ "GenSigSendType" SG_ 746 ABS_ESP_WssRREdgesSum 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 746 ABS_ESP_WssRLEdgesSum 100;
+BA_ "GenSigSendType" SG_ 746 ABS_ESP_WssRLEdgesSum 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 746 ABS_ESP_RRWheelSpeed 100;
+BA_ "GenSigSendType" SG_ 746 ABS_ESP_RRWheelSpeed 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 746 ABS_ESP_RLWheelSpeed 100;
+BA_ "GenSigSendType" SG_ 746 ABS_ESP_RLWheelSpeed 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 746 ABS_ESP_RRWhSpeedValidData 100;
+BA_ "GenSigSendType" SG_ 746 ABS_ESP_RRWhSpeedValidData 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 746 ABS_ESP_RLWhSpeedValidData 100;
+BA_ "GenSigSendType" SG_ 746 ABS_ESP_RLWhSpeedValidData 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 785 ABS_ESP_EBD_Fault 100;
+BA_ "GenSigSendType" SG_ 785 ABS_ESP_EBD_Fault 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 785 ABS_ESP_ABS_Fault 100;
+BA_ "GenSigSendType" SG_ 785 ABS_ESP_ABS_Fault 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 785 ABS_ESP_ABS_Active 100;
+BA_ "GenSigSendType" SG_ 785 ABS_ESP_ABS_Active 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 785 ABS_ESP_VehSOSigValidData 100;
+BA_ "GenSigSendType" SG_ 785 ABS_ESP_VehSOSigValidData 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 785 ABS_ESP_VehicleSpeedVSOSig 100;
+BA_ "GenSigSendType" SG_ 785 ABS_ESP_VehicleSpeedVSOSig 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 785 ABS_ESP_FRWheelSpeed 100;
+BA_ "GenSigSendType" SG_ 785 ABS_ESP_FRWheelSpeed 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 785 ABS_ESP_FRWhSpeedValidData 100;
+BA_ "GenSigSendType" SG_ 785 ABS_ESP_FRWhSpeedValidData 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 785 ABS_ESP_FLWheelSpeed 100;
+BA_ "GenSigSendType" SG_ 785 ABS_ESP_FLWheelSpeed 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 785 ABS_ESP_FLWhSpeedValidData 100;
+BA_ "GenSigSendType" SG_ 785 ABS_ESP_FLWhSpeedValidData 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_HEST_Command 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_HEST_Command 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_DPF_ActiveRegInh 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_DPF_ActiveRegInh 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_DPF_Status 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_DPF_Status 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_DPF_Command 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_DPF_Command 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_DPF_Force 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_DPF_Force 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_DPF_Inhibit 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_DPF_Inhibit 0;
+BA_ "GenSigSendType" SG_ 1318 EMS_Diesel_Immobilizer 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_Diesel_Immobilizer 250;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_Diesel_DieselGlow 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_Diesel_DieselGlow 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_Diesel_OilPressureLow 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_Diesel_OilPressureLow 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_Diesel_DieselSVS 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_Diesel_DieselSVS 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_Diesel_DieselStop 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_Diesel_DieselStop 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_Diesel_DieselMIL 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_Diesel_DieselMIL 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1318 EMS_Diesel_WaterInFuel 250;
+BA_ "GenSigSendType" SG_ 1318 EMS_Diesel_WaterInFuel 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1315 EMS_MIL_LampSignal 500;
+BA_ "GenSigSendType" SG_ 1315 EMS_MIL_LampSignal 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1315 EMS_FuelComsumptionInst 500;
+BA_ "GenSigSendType" SG_ 1315 EMS_FuelComsumptionInst 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1315 EMS_ErrorEngCoolantTemp 500;
+BA_ "GenSigSendType" SG_ 1315 EMS_ErrorEngCoolantTemp 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1315 EMS_ErrorBatteryVoltage 500;
+BA_ "GenSigSendType" SG_ 1315 EMS_ErrorBatteryVoltage 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1315 EMS_EngineSVSLampSignal 500;
+BA_ "GenSigSendType" SG_ 1315 EMS_EngineSVSLampSignal 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1315 EMS_BatteryVoltage 500;
+BA_ "GenSigSendType" SG_ 1315 EMS_BatteryVoltage 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 1315 EMS_EngineCoolantTemperature 500;
+BA_ "GenSigSendType" SG_ 1315 EMS_EngineCoolantTemperature 0;
+BA_ "GenSigStartValue" SG_ 1315 EMS_EngineCoolantTemperature 64;
+BA_ "GenSigTimeoutTime_IC" SG_ 633 EMS_ErrorEngineSpeedSignal 50;
+BA_ "GenSigSendType" SG_ 633 EMS_ErrorEngineSpeedSignal 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 633 EMS_CruiseControlStatus 50;
+BA_ "GenSigSendType" SG_ 633 EMS_CruiseControlStatus 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 633 EMS_EngineSpeedRPM 50;
+BA_ "GenSigSendType" SG_ 633 EMS_EngineSpeedRPM 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 417 TCU_VEHSPD_TCU 50;
+BA_ "GenSigSendType" SG_ 417 TCU_VEHSPD_TCU 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 417 TCU_N_TC 50;
+BA_ "GenSigSendType" SG_ 417 TCU_N_TC 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 417 TCU_GEAR_RATIO 50;
+BA_ "GenSigSendType" SG_ 417 TCU_GEAR_RATIO 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 417 TCU_TQI_TCU_enable 50;
+BA_ "GenSigSendType" SG_ 417 TCU_TQI_TCU_enable 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 417 TCU_TCU_TYPE 50;
+BA_ "GenSigSendType" SG_ 417 TCU_TCU_TYPE 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_TQI_TCU 50;
+BA_ "GenSigSendType" SG_ 416 TCU_TQI_TCU 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_TEMP_AT 50;
+BA_ "GenSigSendType" SG_ 416 TCU_TEMP_AT 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_TAR_GC 50;
+BA_ "GenSigSendType" SG_ 416 TCU_TAR_GC 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_CUR_GR 50;
+BA_ "GenSigSendType" SG_ 416 TCU_CUR_GR 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_ETL_TCU 50;
+BA_ "GenSigSendType" SG_ 416 TCU_ETL_TCU 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_G_SEL_DISP 50;
+BA_ "GenSigSendType" SG_ 416 TCU_G_SEL_DISP 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_SWI_CC 50;
+BA_ "GenSigSendType" SG_ 416 TCU_SWI_CC 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_SWI_GS 50;
+BA_ "GenSigSendType" SG_ 416 TCU_SWI_GS 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_MIL 50;
+BA_ "GenSigSendType" SG_ 416 TCU_MIL 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_FAN_CRTL_TCU 50;
+BA_ "GenSigSendType" SG_ 416 TCU_FAN_CRTL_TCU 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_F_TCU 50;
+BA_ "GenSigSendType" SG_ 416 TCU_F_TCU 0;
+BA_ "GenSigTimeoutTime_IC" SG_ 416 TCU_GearType 50;
+BA_ "GenSigSendType" SG_ 416 TCU_GearType 0;
+BA_ "GenSigStartValue" SG_ 257 EMS_IntakeAirTemperature 48;
+BA_ "GenSigStartValue" SG_ 251 EMS_IndicatedMaximumTorque 254;
+VAL_ 928 IMMO_ImmoLampSts 3 "Valid" 2 "Flash" 1 "On" 0 "Off" ;
+VAL_ 339 IC_CFG_WheelBase_Backup 3 "Not used" 2 "Not used" 1 "Short axle" 0 "Long axle" ;
+VAL_ 339 IC_CFG_VehicleType_Backup 1 "LHD(Left hand drive)" 0 "RHD(Right hand drive)" ;
+VAL_ 339 IC_CFG_VehicleLine_Backup 3 "Reserved" 2 "MPX" 1 "U201" 0 "P201" ;
+VAL_ 339 IC_CFG_TransType_Backup 7 "Description for the value '0x7'" 6 "Not used" 5 "Not used" 4 "Not used" 3 "AMT" 2 "MT(JC538)" 1 "MT(TC038)" 0 "AT" ;
+VAL_ 339 IC_CFG_TPMS_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_TireSize_Backup 7 "Not used" 6 "Not used" 5 "Not used" 4 "Not used" 3 "Not used" 2 "265/60R18" 1 "265/65R17" 0 "265/70R16" ;
+VAL_ 339 IC_CFG_TCU_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_SRS_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_SAS_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_RAxleRatio_Backup 3 "Not used" 2 "Not used" 1 "4.1" 0 "3.889" ;
+VAL_ 339 IC_CFG_PrSteering_Backup 3 "Not used" 2 "Electrical Power Steering" 1 "Liquid Power Steering" 0 "No power steering" ;
+VAL_ 339 IC_CFG_IMMO_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_IC_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_HVAC_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_GateWay_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_FuelType_Backup 1 "Gasoline" 0 "Diesel" ;
+VAL_ 339 IC_CFG_FrontAxleDisconnect_Bk 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_ESP_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_EngineType_Backup 15 "Not used" 14 "Not used" 13 "Not used" 12 "Not used" 11 "Not used" 10 "Not used" 9 "Not used" 8 "Not used" 7 "Not used" 6 "Not used" 5 "BJ486TCI_125KW/250Nm" 4 "GDI SSM" 3 "GDI2.3" 2 "GDI2.0" 1 "ISF2.8_120KW/360Nm" 0 "ISF2.8_96KW/280Nm" ;
+VAL_ 339 IC_CFG_EMSGasoline_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_EMSDiesel_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_EnicDifferential_Bk 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_CountryCode_Backup 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Tailand" 2 "Russia" 1 "Out of China" 0 "China" ;
+VAL_ 339 IC_CFG_ConfigConfirmedSts 3 "Description for the value '0x3'" 2 "Request for data" 1 "Programmed" 0 "Not Programmed" ;
+VAL_ 339 IC_CFG_BodyStyle_Backup 3 "Not used" 2 "Not used" 1 "4 Door" 0 "2 Door" ;
+VAL_ 339 IC_CFG_BCM_Backup 1 "Present" 0 "No present" ;
+VAL_ 339 IC_CFG_AWD_Backup 1 "4*4" 0 "4*2" ;
+VAL_ 339 IC_CFG_ABS_Backup 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_HVAC 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_WheelBase 3 "Not used" 2 "Not used" 1 "Short axle" 0 "Long axle" ;
+VAL_ 336 BCM_CFG_VehicleType 1 "LHD(Left hand drive)" 0 "RHD(Right hand drive)" ;
+VAL_ 336 BCM_CFG_VehicleLine 3 "Reserved" 2 "MPX" 1 "U201" 0 "P201" ;
+VAL_ 336 BCM_CFG_TransmissionType 7 "Description for the value '0x7'" 6 "Not used" 5 "Not used" 4 "Not used" 3 "AMT" 2 "MT(JC538)" 1 "MT(TC038)" 0 "AT" ;
+VAL_ 336 BCM_CFG_TPMS 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_TireSize 7 "Not used" 6 "Not used" 5 "Not used" 4 "Not used" 3 "Not used" 2 "265/60R18" 1 "265/65R17" 0 "265/70R16" ;
+VAL_ 336 BCM_CFG_TCU 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_SRS 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_SAS 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_RearAxleRatio 3 "Not used" 2 "Not used" 1 "4.1" 0 "3.889" ;
+VAL_ 336 BCM_CFG_PowerSteering 3 "Not used" 2 "Electrical Power Steering" 1 "Liquid Power Steering" 0 "No power steering" ;
+VAL_ 336 BCM_CFG_IMMO 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_IC 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_GateWay 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_FuelType 1 "Gasoline" 0 "Diesel" ;
+VAL_ 336 BCM_CFG_FrontAxleDisconnect 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_ESP 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_EngineType 15 "Not used" 14 "Not used" 13 "Not used" 12 "Not used" 11 "Not used" 10 "Not used" 9 "Not used" 8 "Not used" 7 "Not used" 6 "Not used" 5 "BJ486TCI_125KW/250Nm" 4 "GDI SSM" 3 "GDI2.3" 2 "GDI2.0" 1 "ISF2.8_120KW/360Nm" 0 "ISF2.8_96KW/280Nm" ;
+VAL_ 336 BCM_CFG_EMSGasoline 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_EMSDiesel 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_EnicDifferential 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_CountryCode 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Tailand" 2 "Russia" 1 "Out of China" 0 "China" ;
+VAL_ 336 BCM_CFG_ConfigConfirmedSts 3 "Description for the value '0x3'" 2 "Request for data" 1 "Programmed" 0 "Not Programmed" ;
+VAL_ 336 BCM_CFG_BodyStyle 3 "Not used" 2 "Not used" 1 "4 Door" 0 "2 Door" ;
+VAL_ 336 BCM_CFG_BCM 1 "Present" 0 "No present" ;
+VAL_ 336 BCM_CFG_AWD 1 "4*4" 0 "4*2" ;
+VAL_ 336 BCM_CFG_ABS 1 "Present" 0 "No present" ;
+VAL_ 1077 HVAC_RearDefrogRequest 1 "Request" 0 "Not request" ;
+VAL_ 1077 HVAC_MiddlePressureSwitch 1 "ON" 0 "OFF" ;
+VAL_ 1077 HVAC_ACrequest 1 "Request" 0 "Not request" ;
+VAL_ 797 SRS_CrashOutputSts 10 "Left hand side" 9 "Not used" 8 "Right hand side" 7 "Not used" 6 "Not used" 5 "Not used" 4 "Not used" 3 "Not used" 2 "Front first level" 1 "Front pretensioner" 0 "No crash" ;
+VAL_ 797 SRS_SBRfromSRSvalid 1 "Valid" 0 "Not valid" ;
+VAL_ 797 SRS_SBR_Passenger 3 "Not used" 2 "Lamp on and buzzing" 1 "Lamp flashing(reserve)" 0 "Lamp off" ;
+VAL_ 797 SRS_SBR_Driver 3 "Not used" 2 "Lamp on and buzzing" 1 "Lamp flashing(reserved)" 0 "Lamp off" ;
+VAL_ 797 SRS_PsngrBagSts 3 "Not used" 2 "Lamp on" 1 "Lamp flashing(reversed)" 0 "Lamp off" ;
+VAL_ 797 SRS_AirBagFailSts 3 "Not used" 2 "Fail present lamp on" 1 "Fail no present lamp flashing" 0 "Fail no present lamp off" ;
+VAL_ 1307 TPMS_TyreTempStatus 2 "High" 1 "Normal" 0 "Not received" ;
+VAL_ 1307 TPMS_TyrePressureStatus 4 "Air leaking" 3 "High" 2 "Low" 1 "Normal" 0 "Not received" ;
+VAL_ 1307 TPMS_TyrePosition 3 "RearRight" 2 "RearLeft" 1 "FrontRight" 0 "FrontLeft" ;
+VAL_ 1307 TPMS_RRSensorLearnStatus 1 "Learned" 0 "Not learned" ;
+VAL_ 1307 TPMS_RFSensorLearnStatus 1 "Learned" 0 "Not learned" ;
+VAL_ 1307 TPMS_LRSensorLearnStatus 1 "Learned" 0 "Not learned" ;
+VAL_ 1307 TPMS_LFSensorLearnStatus 1 "Learned" 0 "Not learned" ;
+VAL_ 1307 TPMS_TPMSLearnStatus 3 "Learned error" 2 "Learned successfully" 1 "Learning" 0 "Not learning" ;
+VAL_ 1073 IC_Vacuum 1 "Off" 0 "On" ;
+VAL_ 1073 IC_AirbagAlarmLampStatus 2 "Not used" 1 "Failure" 0 "No failure" ;
+VAL_ 1073 IC_DriverSeatBeltStatus 1 "Bulket" 0 "Not bulked" ;
+VAL_ 1073 IC_PassSeatBeltStatus 1 "Bulked" 0 "Not bulked" ;
+VAL_ 1073 IC_BrakeFluildLevel 1 "Low level" 0 "Normal" ;
+VAL_ 1073 IC_AirFilter 1 "Failure" 0 "OK" ;
+VAL_ 1073 IC_FrontClutchSts 1 "Closed" 0 "Open" ;
+VAL_ 1073 IC_ParkBrake 1 "Parked" 0 "Not parked" ;
+VAL_ 914 BCM_BackDoorStatus 1 "Open" 0 "Closed" ;
+VAL_ 914 BCM_ACMiddlePressureSwitch 1 "On" 0 "Off" ;
+VAL_ 914 BCM_ACrequest 1 "Request" 0 "Not request" ;
+VAL_ 914 BCM_SportMode 1 "Mode on" 0 "Mode off" ;
+VAL_ 914 BCM_WinterMode 1 "Mode on" 0 "Mode off" ;
+VAL_ 914 BCM_RearLeftDoorStatus 1 "Open" 0 "Closed" ;
+VAL_ 914 BCM_ReverseGearSwitch 1 "Active" 0 "Not active" ;
+VAL_ 914 BCM_KeyInStatus 1 "Key in" 0 "Key out" ;
+VAL_ 914 BCM_KeyPosition 3 "Crank and ON" 2 "ON" 1 "ACC" 0 "Off" ;
+VAL_ 914 BCM_RearDefrost 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_FrontFogStatus 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_RearWipperSwitchStatus 1 "Valid" 0 "Invalid" ;
+VAL_ 914 BCM_RearFogStatus 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_RearRightDoorStatus 1 "Open" 0 "Closed" ;
+VAL_ 914 BCM_HoodStatus 1 "Open" 0 "Closed" ;
+VAL_ 914 BCM_FrontRightDoorStatus 1 "Open" 0 "Closed" ;
+VAL_ 914 BCM_FrontLeftDoorStatus 1 "Open" 0 "Closed" ;
+VAL_ 914 BCM_PassangerWindowInhibit 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_LowBeamStatus 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_HighBeamStatus 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_ParkingLightStatus 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_HazardStatus 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_TurnLeftStatus 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_TurnRightStatus 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_DayRunningLightStatus 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_KeyReminder 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_ParkingLightReminder 1 "Active" 0 "Off" ;
+VAL_ 914 BCM_AlarmMode 3 "Invalid" 2 "Security LED fault blinking" 1 "Security LED blinking" 0 "Security LED off" ;
+VAL_ 1064 AWD_ShiftMotorPosition 15 "Unused" 14 "Unused" 13 "Unused" 12 "Unused" 11 "Unused" 10 "Right Stop" 9 "4WD Low" 8 "Between 4WD Low" 7 "Neutral" 6 "Between neutral" 5 "4WD Lock" 4 "Between 4WD Lock" 3 "2WD/High range" 2 "Left stop" 1 "Position invalid" 0 "Position unknown" ;
+VAL_ 1064 AWD_EngineLimitingEnable 1 "Enable" 0 "Disable" ;
+VAL_ 1064 AWD_TCMMessagesMissing 1 "One of the messages is missing" 0 "TCU messages are correct" ;
+VAL_ 1064 AWD_BCMMessagesMissing 1 "One of the signals is missing" 0 "Brake signals are correct" ;
+VAL_ 1064 AWD_ECMMessagesMissing 1 "One of the message are missing" 0 "EngController message correct" ;
+VAL_ 1064 AWD_ClutchCircuitFaultSts 3 "Clutch circuit open" 2 "Clutch circuit shorted to GRD" 1 "Clutch circuit shorted to BAT" 0 "Normal operation" ;
+VAL_ 1064 AWD_ExternalRequestIgnored 1 "External request not accecpted" 0 " External request Accecpted" ;
+VAL_ 1064 AWD_DiagnosticLampRequest 1 "Request" 0 "Not request" ;
+VAL_ 1064 AWD_ShiftSysEncoderFault 1 "Fault" 0 "Not fault" ;
+VAL_ 1064 AWD_ShiftSystemStuckInLow 1 "Fault" 0 "Not fault" ;
+VAL_ 1064 AWD_ShiftSysActuatorFault 1 "Fault" 0 "Not fault" ;
+VAL_ 1064 AWD_CouplingTherFailsaf 1 "Fault" 0 "Not fault" ;
+VAL_ 1064 AWD_CouplingFaultStatus 3 "Permanent coupling failure" 2 "Temporatary coupling failure" 1 "Reduced coupling functionality" 0 "Normal Operating mode" ;
+VAL_ 1064 AWD_ModeChangeInProgress 1 "In progress" 0 "Not in progress" ;
+VAL_ 1064 AWD_SystemOperatingMode 15 "Unused" 14 "Unused" 13 "Unused" 12 "Unused" 11 "Unused" 10 "Unused" 9 "Unused" 8 "Unused" 7 "Sport Mode(Active)" 6 "Mode 4WD Low Range" 5 "Mode neutral" 4 "Mode Active(AWD)" 3 "Mode 4WD(Lock)" 2 "Mode 2WD" 1 "System Fault" 0 "Mode unknown" ;
+VAL_ 1064 AWD_SystemType 7 "Unused" 6 "Unused" 5 "Unused" 4 "Active 2 speed(RWD)" 3 "Active single speed(RWD)" 2 "Active single speed(FWD)" 1 "Passive 2 speed(AWD)" 0 "Part time 2 speed(RWD)" ;
+VAL_ 544 SAS_SASFailureSts 1 "Sensor information valid" 0 "Sensor information invalid" ;
+VAL_ 544 SAS_CAL 1 "Sensor calibrated" 0 "Sensor not calibrated" ;
+VAL_ 544 SAS_TRIM 1 "Sensor trimmed" 0 "Sensor not trimmed" ;
+VAL_ 529 ESP_ShiftInhibit 1 "Inhibit" 0 "Allow" ;
+VAL_ 529 ESP_TOD_FastOpenRequest 3 "Error" 2 "Torque max limit" 1 "Open Clutch" 0 "Passive" ;
+VAL_ 529 ESP_DragTorConActive 1 "Active" 0 "Not active" ;
+VAL_ 529 ESP_EngTorReductionActive 1 "Active" 0 "Not active" ;
+VAL_ 529 ESP_ESP_Off_PALA_Lamp 1 "On" 0 "Off" ;
+VAL_ 529 ESP_VDC_Fault 1 "Fault" 0 "Not Fault" ;
+VAL_ 529 ESP_TCS_Fault 1 "Fault" 0 "Not fault" ;
+VAL_ 529 ESP_ESP_LampOn 1 "Active" 0 "Not active" ;
+VAL_ 746 ABS_ESP_RRWhSpeedValidData 1 "Valid" 0 "Not Valid" ;
+VAL_ 746 ABS_ESP_RLWhSpeedValidData 1 "Valid" 0 "Not Valid" ;
+VAL_ 785 ABS_ESP_EBD_Fault 1 "Active" 0 "Not active" ;
+VAL_ 785 ABS_ESP_ABS_Fault 1 "Active" 0 "Not active" ;
+VAL_ 785 ABS_ESP_ABS_Active 1 "Active" 0 "Not active" ;
+VAL_ 785 ABS_ESP_VehSOSigValidData 1 "Valid" 0 "Not Valid" ;
+VAL_ 785 ABS_ESP_FRWhSpeedValidData 1 "Valid" 0 "Not Valid" ;
+VAL_ 785 ABS_ESP_FLWhSpeedValidData 1 "Valid" 0 "Not Valid" ;
+VAL_ 1318 EMS_HEST_Command 7 "Not available" 6 "Reserved" 5 "Reserved" 4 "Lamp on - Fast blink" 3 "Reserved" 2 "Reserved" 1 "Lamp on - Solid" 0 "Lamp off" ;
+VAL_ 1318 EMS_DPF_ActiveRegInh 3 "Not available" 2 "Reserved" 1 "Inhibited" 0 "Not inhibited" ;
+VAL_ 1318 EMS_DPF_Status 7 "Not available" 6 "Reserved" 5 "Reserved" 4 "Reserved" 3 "Regeneration needed - highest le" 2 "Regeneration needed - moderate l" 1 "Regeneration needed - lowest lev" 0 "Regeneration not needed" ;
+VAL_ 1318 EMS_DPF_Command 7 "Not available" 6 "Reserved" 5 "Reserved" 4 "Lamp on - Fast blink" 3 "Reserved" 2 "Reserved" 1 "Lamp on - Solid" 0 "Lamp off" ;
+VAL_ 1318 EMS_DPF_Force 3 "Not available" 2 "Error" 1 "Active" 0 "Not active" ;
+VAL_ 1318 EMS_DPF_Inhibit 3 "Not available" 2 "Error" 1 "Active" 0 "Not active" ;
+VAL_ 1318 EMS_Diesel_Immobilizer 3 "Not defined" 2 "Blocked" 1 "Locked" 0 "Unlocked" ;
+VAL_ 1318 EMS_Diesel_DieselGlow 3 "Not available" 2 "Reserved" 1 "Start enable ON" 0 "Start enable OFF" ;
+VAL_ 1318 EMS_Diesel_DieselSVS 3 "Reserved" 2 "Reserved" 1 "Lamp on" 0 "Lamp off" ;
+VAL_ 1318 EMS_Diesel_DieselStop 3 "Reserved" 2 "Reserved" 1 "Lamp on" 0 "Lamp off" ;
+VAL_ 1318 EMS_Diesel_DieselMIL 3 "Reserved" 2 "Reserved" 1 "Lamp on" 0 "Lamp off" ;
+VAL_ 1318 EMS_Diesel_WaterInFuel 3 "Not available" 2 "Error" 1 "Yes" 0 "No" ;
+VAL_ 1315 EMS_WarmUpCycle 1 "Active" 0 "No active" ;
+VAL_ 1315 EMS_MIL_LampSignal 1 "Light on" 0 "Light off" ;
+VAL_ 1315 EMS_ErrorEngCoolantTemp 1 "Error" 0 "No Error" ;
+VAL_ 1315 EMS_ErrorBatteryVoltage 1 "Error" 0 "No Error" ;
+VAL_ 1315 EMS_EngineSVSLampSignal 1 "SVS light on" 0 "SVS light off" ;
+VAL_ 1315 EMS_DrivingCycle 1 "Active" 0 "No active" ;
+VAL_ 633 EMS_KeySwitchState 1 "On" 0 "Off" ;
+VAL_ 633 EMS_IdleSpeedStatus 1 "In idle" 0 "Not in idle" ;
+VAL_ 633 EMS_ErrorEngineSpeedSignal 1 "Error" 0 "No Error" ;
+VAL_ 633 EMS_ErrorAcclerationPedal 1 "Error" 0 "No Error" ;
+VAL_ 633 EMS_EngineFuelCutOff 1 "Fuel cut off" 0 "Fuel not cut off" ;
+VAL_ 633 EMS_CruiseControlStatus 3 "Error" 2 "Standby" 1 "Active" 0 "Off" ;
+VAL_ 633 EMS_ClutchPedalStatus 3 "Error" 2 "Reserved" 1 "Pressed" 0 "Not Pressed" ;
+VAL_ 633 EMS_BrakePedleStatus 3 "Error" 2 "Reserved" 1 "Pressed" 0 "Not Pressed" ;
+VAL_ 633 EMS_ACCompressureStatus 1 "AC compressure relay on" 0 "AC compressure relay off" ;
+VAL_ 417 TCU_TQI_TCU_enable 1 "Fast reduction" 0 "Not used" ;
+VAL_ 417 TCU_TCU_TYPE 1 "Step auto transmission" 0 "Not used" ;
+VAL_ 416 TCU_TAR_GC 15 "Fault" 14 "Not used" 13 "Not used" 12 "Not used" 11 "Not used" 10 "Not used" 9 "Not used" 8 "Not used" 7 "Reverse gear" 6 "6th gear" 5 "5th gear" 4 "4th gear" 3 "3rd gear" 2 "2nd gear" 1 "1st gear" 0 "If N or P are detected" ;
+VAL_ 416 TCU_CUR_GR 15 "Fault" 14 "Reverse gear engaged" 13 "Not used" 12 "Not used" 11 "Not used" 10 "Not used" 9 "Not used" 8 "Not used" 7 "Not used" 6 "6th gear engaged" 5 "5th gear engaged" 4 "4th gear engaged" 3 "3rd gear engaged" 2 "2nd gear engaged" 1 "1st gear engaged" 0 "Gear selector not in D and R" ;
+VAL_ 416 TCU_G_SEL_DISP 15 "Fault" 14 "Not used" 13 "Not used" 12 "Not used" 11 "Not used" 10 "Manual mode" 9 "Not used" 8 "Sport mode" 7 "R" 6 "N" 5 "D" 4 "To be defined" 3 "D3" 2 "D2" 1 "D1" 0 "P" ;
+VAL_ 416 TCU_SWI_CC 3 "Not used" 2 "Lock up clutch closed" 1 "Lock up clutch slip active" 0 "Lock up clutch open" ;
+VAL_ 416 TCU_SWI_GS 1 "Gear change is active" 0 "No gear change" ;
+VAL_ 416 TCU_MIL 1 "Request to MIL on" 0 "No request to MIL on" ;
+VAL_ 416 TCU_FAN_CRTL_TCU 3 "High_speed control" 2 "Mid_speed control" 1 "Low_speed control" 0 "Fan control is not used" ;
+VAL_ 416 TCU_F_TCU 3 "Not used" 2 "Dtc failure in TCU,limp home" 1 "Diagnostic failure in TCU" 0 "No failure" ;
+VAL_ 416 TCU_GearType 6 "6 speed transmission" 5 "Reversed" 4 "Reversed" 3 "Reversed" 2 "Reversed" 1 "Reversed" 0 "Reversed" ;
+VAL_ 257 EMS_ErrorThrottlePosition 1 "Error" 0 "No Error" ;
+VAL_ 257 EMS_ErrorPressureSensor 1 "Error" 0 "No Error" ;
+VAL_ 251 EMS_EngineTorqueFailure 1 "Failure" 0 "No Failure" ;
+
